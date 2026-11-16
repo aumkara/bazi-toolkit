@@ -37,8 +37,8 @@ jobs:
           .venv/bin/python -m pip install -q --disable-pip-version-check -r requirements.txt
           .venv/bin/python -m pip install -q --disable-pip-version-check -r requirements-dev.txt
           .venv/bin/python -m pip install -q --disable-pip-version-check --no-deps sxtwl==2.0.7 kinqimen==0.0.6.6
-      - name: Вся батарея самопроверок
-        run: bash check_all.sh
+      - name: Вся батарея самопроверок, включая сверки со сторонним кодом из сети
+        run: bash check_all.sh --network
       - name: Оракулы обязательны
         run: |
           .venv/bin/python verify_vs_lunar.py 120 --require
