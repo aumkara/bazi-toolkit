@@ -1,0 +1,461 @@
+{
+ "source": "https://en.wikipedia.org/wiki/List_of_hexagrams_of_the_I_Ching",
+ "source_revision": "https://en.wikipedia.org/w/index.php?title=List_of_hexagrams_of_the_I_Ching&oldid=1344901076",
+ "fetched": "2026-11-09",
+ "license": "CC BY-SA 4.0",
+ "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+ "attribution": "Wikipedia contributors, «List of hexagrams of the I Ching», revision 1344901076 of 2026-03-23 (current on the fetch date)",
+ "changes": "Extracted from the page into JSON: for each of the 64 hexagrams only the King Wen number, the Chinese name, pinyin, upper and lower trigram and the Unicode character name were kept; article prose, images and other columns were dropped.",
+ "license_note": "This file is third-party data under CC BY-SA 4.0 and is NOT covered by the project's AGPL-3.0-or-later license.",
+ "note": "King Wen order; upper/lower trigram per hexagram and Unicode name, parsed from the page text (traditional characters as on the page)",
+ "hexagrams": {
+  "1": {
+   "zh": "乾",
+   "pinyin": "qián",
+   "upper": "乾",
+   "lower": "乾",
+   "unicode_name": "HEXAGRAM FOR THE CREATIVE HEAVEN"
+  },
+  "2": {
+   "zh": "坤",
+   "pinyin": "kūn",
+   "upper": "坤",
+   "lower": "坤",
+   "unicode_name": "HEXAGRAM FOR THE RECEPTIVE EARTH"
+  },
+  "3": {
+   "zh": "屯",
+   "pinyin": "zhūn",
+   "upper": "坎",
+   "lower": "震",
+   "unicode_name": "HEXAGRAM FOR DIFFICULTY AT THE BEGINNING"
+  },
+  "4": {
+   "zh": "蒙",
+   "pinyin": "méng",
+   "upper": "艮",
+   "lower": "坎",
+   "unicode_name": "HEXAGRAM FOR YOUTHFUL FOLLY"
+  },
+  "5": {
+   "zh": "需",
+   "pinyin": "xū",
+   "upper": "坎",
+   "lower": "乾",
+   "unicode_name": "HEXAGRAM FOR WAITING"
+  },
+  "6": {
+   "zh": "訟",
+   "pinyin": "sòng",
+   "upper": "乾",
+   "lower": "坎",
+   "unicode_name": "HEXAGRAM FOR CONFLICT"
+  },
+  "7": {
+   "zh": "師",
+   "pinyin": "shī",
+   "upper": "坤",
+   "lower": "坎",
+   "unicode_name": "HEXAGRAM FOR THE ARMY"
+  },
+  "8": {
+   "zh": "比",
+   "pinyin": "bǐ",
+   "upper": "坎",
+   "lower": "坤",
+   "unicode_name": "HEXAGRAM FOR HOLDING TOGETHER"
+  },
+  "9": {
+   "zh": "小畜",
+   "pinyin": "xiǎo xù",
+   "upper": "巽",
+   "lower": "乾",
+   "unicode_name": "HEXAGRAM FOR SMALL TAMING"
+  },
+  "10": {
+   "zh": "履",
+   "pinyin": "lǚ",
+   "upper": "乾",
+   "lower": "兑",
+   "unicode_name": "HEXAGRAM FOR TREADING"
+  },
+  "11": {
+   "zh": "泰",
+   "pinyin": "tài",
+   "upper": "坤",
+   "lower": "乾",
+   "unicode_name": "HEXAGRAM FOR PEACE"
+  },
+  "12": {
+   "zh": "否",
+   "pinyin": "pǐ",
+   "upper": "乾",
+   "lower": "坤",
+   "unicode_name": "HEXAGRAM FOR STANDSTILL"
+  },
+  "13": {
+   "zh": "同人",
+   "pinyin": "tóng rén",
+   "upper": "乾",
+   "lower": "离",
+   "unicode_name": "HEXAGRAM FOR FELLOWSHIP"
+  },
+  "14": {
+   "zh": "大有",
+   "pinyin": "dà yǒu",
+   "upper": "离",
+   "lower": "乾",
+   "unicode_name": "HEXAGRAM FOR GREAT POSSESSION"
+  },
+  "15": {
+   "zh": "謙",
+   "pinyin": "qiān",
+   "upper": "坤",
+   "lower": "艮",
+   "unicode_name": "HEXAGRAM FOR MODESTY"
+  },
+  "16": {
+   "zh": "豫",
+   "pinyin": "yù",
+   "upper": "震",
+   "lower": "坤",
+   "unicode_name": "HEXAGRAM FOR ENTHUSIASM"
+  },
+  "17": {
+   "zh": "隨",
+   "pinyin": "suí",
+   "upper": "兑",
+   "lower": "震",
+   "unicode_name": "HEXAGRAM FOR FOLLOWING"
+  },
+  "18": {
+   "zh": "蠱",
+   "pinyin": "gǔ",
+   "upper": "艮",
+   "lower": "巽",
+   "unicode_name": "HEXAGRAM FOR WORK ON THE DECAYED"
+  },
+  "19": {
+   "zh": "臨",
+   "pinyin": "lín",
+   "upper": "坤",
+   "lower": "兑",
+   "unicode_name": "HEXAGRAM FOR APPROACH"
+  },
+  "20": {
+   "zh": "觀",
+   "pinyin": "guān",
+   "upper": "巽",
+   "lower": "坤",
+   "unicode_name": "HEXAGRAM FOR CONTEMPLATION"
+  },
+  "21": {
+   "zh": "噬嗑",
+   "pinyin": "shì kè",
+   "upper": "离",
+   "lower": "震",
+   "unicode_name": "HEXAGRAM FOR BITING THROUGH"
+  },
+  "22": {
+   "zh": "賁",
+   "pinyin": "bì",
+   "upper": "艮",
+   "lower": "离",
+   "unicode_name": "HEXAGRAM FOR GRACE"
+  },
+  "23": {
+   "zh": "剝",
+   "pinyin": "bō",
+   "upper": "艮",
+   "lower": "坤",
+   "unicode_name": "HEXAGRAM FOR SPLITTING APART"
+  },
+  "24": {
+   "zh": "復",
+   "pinyin": "fù",
+   "upper": "坤",
+   "lower": "震",
+   "unicode_name": "HEXAGRAM FOR RETURN"
+  },
+  "25": {
+   "zh": "无妄",
+   "pinyin": "wú wàng",
+   "upper": "乾",
+   "lower": "震",
+   "unicode_name": "HEXAGRAM FOR INNOCENCE"
+  },
+  "26": {
+   "zh": "大畜",
+   "pinyin": "dà xù",
+   "upper": "艮",
+   "lower": "乾",
+   "unicode_name": "HEXAGRAM FOR GREAT TAMING"
+  },
+  "27": {
+   "zh": "頤",
+   "pinyin": "yí",
+   "upper": "艮",
+   "lower": "震",
+   "unicode_name": "HEXAGRAM FOR MOUTH CORNERS"
+  },
+  "28": {
+   "zh": "大過",
+   "pinyin": "dà guò",
+   "upper": "兑",
+   "lower": "巽",
+   "unicode_name": "HEXAGRAM FOR GREAT PREPONDERANCE"
+  },
+  "29": {
+   "zh": "坎",
+   "pinyin": "kǎn",
+   "upper": "坎",
+   "lower": "坎",
+   "unicode_name": "HEXAGRAM FOR THE ABYSMAL WATER"
+  },
+  "30": {
+   "zh": "離",
+   "pinyin": "lí",
+   "upper": "离",
+   "lower": "离",
+   "unicode_name": "HEXAGRAM FOR THE CLINGING FIRE"
+  },
+  "31": {
+   "zh": "咸",
+   "pinyin": "xián",
+   "upper": "兑",
+   "lower": "艮",
+   "unicode_name": "HEXAGRAM FOR INFLUENCE"
+  },
+  "32": {
+   "zh": "恆",
+   "pinyin": "héng",
+   "upper": "震",
+   "lower": "巽",
+   "unicode_name": "HEXAGRAM FOR DURATION"
+  },
+  "33": {
+   "zh": "遯",
+   "pinyin": "dùn",
+   "upper": "乾",
+   "lower": "艮",
+   "unicode_name": "HEXAGRAM FOR RETREAT"
+  },
+  "34": {
+   "zh": "大壯",
+   "pinyin": "dà zhuàng",
+   "upper": "震",
+   "lower": "乾",
+   "unicode_name": "HEXAGRAM FOR GREAT POWER"
+  },
+  "35": {
+   "zh": "晉",
+   "pinyin": "jìn",
+   "upper": "离",
+   "lower": "坤",
+   "unicode_name": "HEXAGRAM FOR PROGRESS"
+  },
+  "36": {
+   "zh": "明夷",
+   "pinyin": "míng yí",
+   "upper": "坤",
+   "lower": "离",
+   "unicode_name": "HEXAGRAM FOR DARKENING OF THE LIGHT"
+  },
+  "37": {
+   "zh": "家人",
+   "pinyin": "jiā rén",
+   "upper": "巽",
+   "lower": "离",
+   "unicode_name": "HEXAGRAM FOR THE FAMILY"
+  },
+  "38": {
+   "zh": "睽",
+   "pinyin": "kuí",
+   "upper": "离",
+   "lower": "兑",
+   "unicode_name": "HEXAGRAM FOR OPPOSITION"
+  },
+  "39": {
+   "zh": "蹇",
+   "pinyin": "jiǎn",
+   "upper": "坎",
+   "lower": "艮",
+   "unicode_name": "HEXAGRAM FOR OBSTRUCTION"
+  },
+  "40": {
+   "zh": "解",
+   "pinyin": "jiě",
+   "upper": "震",
+   "lower": "坎",
+   "unicode_name": "HEXAGRAM FOR DELIVERANCE"
+  },
+  "41": {
+   "zh": "損",
+   "pinyin": "sǔn",
+   "upper": "艮",
+   "lower": "兑",
+   "unicode_name": "HEXAGRAM FOR DECREASE"
+  },
+  "42": {
+   "zh": "益",
+   "pinyin": "yì",
+   "upper": "巽",
+   "lower": "震",
+   "unicode_name": "HEXAGRAM FOR INCREASE"
+  },
+  "43": {
+   "zh": "夬",
+   "pinyin": "guài",
+   "upper": "兑",
+   "lower": "乾",
+   "unicode_name": "HEXAGRAM FOR BREAKTHROUGH"
+  },
+  "44": {
+   "zh": "姤",
+   "pinyin": "gòu",
+   "upper": "乾",
+   "lower": "巽",
+   "unicode_name": "HEXAGRAM FOR COMING TO MEET"
+  },
+  "45": {
+   "zh": "萃",
+   "pinyin": "cuì",
+   "upper": "兑",
+   "lower": "坤",
+   "unicode_name": "HEXAGRAM FOR GATHERING TOGETHER"
+  },
+  "46": {
+   "zh": "升",
+   "pinyin": "shēng",
+   "upper": "坤",
+   "lower": "巽",
+   "unicode_name": "HEXAGRAM FOR PUSHING UPWARD"
+  },
+  "47": {
+   "zh": "困",
+   "pinyin": "kùn",
+   "upper": "兑",
+   "lower": "坎",
+   "unicode_name": "HEXAGRAM FOR OPPRESSION"
+  },
+  "48": {
+   "zh": "井",
+   "pinyin": "jǐng",
+   "upper": "坎",
+   "lower": "巽",
+   "unicode_name": "HEXAGRAM FOR THE WELL"
+  },
+  "49": {
+   "zh": "革",
+   "pinyin": "gé",
+   "upper": "兑",
+   "lower": "离",
+   "unicode_name": "HEXAGRAM FOR REVOLUTION"
+  },
+  "50": {
+   "zh": "鼎",
+   "pinyin": "dǐng",
+   "upper": "离",
+   "lower": "巽",
+   "unicode_name": "HEXAGRAM FOR THE CAULDRON"
+  },
+  "51": {
+   "zh": "震",
+   "pinyin": "zhèn",
+   "upper": "震",
+   "lower": "震",
+   "unicode_name": "HEXAGRAM FOR THE AROUSING THUNDER"
+  },
+  "52": {
+   "zh": "艮",
+   "pinyin": "gèn",
+   "upper": "艮",
+   "lower": "艮",
+   "unicode_name": "HEXAGRAM FOR THE KEEPING STILL MOUNTAIN"
+  },
+  "53": {
+   "zh": "漸",
+   "pinyin": "jiàn",
+   "upper": "巽",
+   "lower": "艮",
+   "unicode_name": "HEXAGRAM FOR DEVELOPMENT"
+  },
+  "54": {
+   "zh": "歸妹",
+   "pinyin": "guī mèi",
+   "upper": "震",
+   "lower": "兑",
+   "unicode_name": "HEXAGRAM FOR THE MARRYING MAIDEN"
+  },
+  "55": {
+   "zh": "豐",
+   "pinyin": "fēng",
+   "upper": "震",
+   "lower": "离",
+   "unicode_name": "HEXAGRAM FOR ABUNDANCE"
+  },
+  "56": {
+   "zh": "旅",
+   "pinyin": "lǚ",
+   "upper": "离",
+   "lower": "艮",
+   "unicode_name": "HEXAGRAM FOR THE WANDERER"
+  },
+  "57": {
+   "zh": "巽",
+   "pinyin": "xùn",
+   "upper": "巽",
+   "lower": "巽",
+   "unicode_name": "HEXAGRAM FOR THE GENTLE WIND"
+  },
+  "58": {
+   "zh": "兌",
+   "pinyin": "duì",
+   "upper": "兑",
+   "lower": "兑",
+   "unicode_name": "HEXAGRAM FOR THE JOYOUS LAKE"
+  },
+  "59": {
+   "zh": "渙",
+   "pinyin": "huàn",
+   "upper": "巽",
+   "lower": "坎",
+   "unicode_name": "HEXAGRAM FOR DISPERSION"
+  },
+  "60": {
+   "zh": "節",
+   "pinyin": "jié",
+   "upper": "坎",
+   "lower": "兑",
+   "unicode_name": "HEXAGRAM FOR LIMITATION"
+  },
+  "61": {
+   "zh": "中孚",
+   "pinyin": "zhōng fú",
+   "upper": "巽",
+   "lower": "兑",
+   "unicode_name": "HEXAGRAM FOR INNER TRUTH"
+  },
+  "62": {
+   "zh": "小過",
+   "pinyin": "xiǎo guò",
+   "upper": "震",
+   "lower": "艮",
+   "unicode_name": "HEXAGRAM FOR SMALL PREPONDERANCE"
+  },
+  "63": {
+   "zh": "既濟",
+   "pinyin": "jì jì",
+   "upper": "坎",
+   "lower": "离",
+   "unicode_name": "HEXAGRAM FOR AFTER COMPLETION"
+  },
+  "64": {
+   "zh": "未濟",
+   "pinyin": "wèi jì",
+   "upper": "离",
+   "lower": "坎",
+   "unicode_name": "HEXAGRAM FOR BEFORE COMPLETION"
+  }
+ }
+}

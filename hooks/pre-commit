@@ -1,0 +1,9 @@
+#!/bin/bash
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Copyright (C) 2026 Tim
+# pre-commit — гейт утечек по тому, что идёт в коммит (репозиторий публичный: каждый пуш виден всем и необратим).
+# Включается командой `bash setup.sh` (git config core.hooksPath hooks). Проверяет только проиндексированное:
+# домашние пути, email, токены, файлы личных чтений, а на машине владельца — даты из имён локальных чтений.
+root="$(git rev-parse --show-toplevel)" || exit 1
+PY="$root/.venv/bin/python"; [ -x "$PY" ] || PY=python3
+exec "$PY" "$root/check_public.py" --staged

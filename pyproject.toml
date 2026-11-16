@@ -1,0 +1,39 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Проект — набор скриптов, запускаемых из checkout, а не устанавливаемый пакет: `pip install .` не поддерживается,
+# установка — `bash setup.sh` (см. README). Этот файл — единое место для версии, метаданных и списка зависимостей;
+# `requirements*.txt` обязаны с ним совпадать (проверяет check_all.sh).
+
+[project]
+name = "bazi-toolkit"
+version = "0.1.0"
+description = "Калькуляторы китайской и ведической метафизики на Swiss Ephemeris, скиллы для LLM-агентов, MCP-сервер и локальная веб-версия Ба Цзы"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "AGPL-3.0-or-later"
+license-files = ["LICENSE"]
+authors = [{ name = "Tim" }]
+dependencies = [
+    "pyswisseph==2.10.3.2",
+    "ephem==4.2.1",
+]
+
+[project.urls]
+Repository = "https://github.com/aumkara/bazi-toolkit"
+Issues = "https://github.com/aumkara/bazi-toolkit/issues"
+Changelog = "https://github.com/aumkara/bazi-toolkit/blob/main/CHANGELOG.md"
+
+[project.optional-dependencies]
+mcp = ["mcp>=2,<3"]
+
+[dependency-groups]
+# внешние оракулы для сверок verify_vs_*.py; kinqimen и sxtwl ставятся отдельно без зависимостей (см. requirements-dev.txt)
+oracles = [
+    "lunar-python==1.4.9",
+    "x-iztro==0.6.1",
+    "caltib==0.3.2",
+    "dashaflow==1.5.1",
+    "pyhd @ git+https://github.com/ppo/pyhd@d80aef667e561fb588dd883f8ce39ceea9593a12",
+]
+
+[tool.uv]
+package = false

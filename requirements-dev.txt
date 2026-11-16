@@ -1,0 +1,9 @@
+# Внешние оракулы для check_all.sh (issue #17) — необязательны: без них шаги verify_vs_* пропускаются.
+mcp>=2,<3                    # MCP-сервер mcp_server.py (issue #21); проверено с 2.3.0; без пакета --selftest пропускает проверку по протоколу
+lunar-python==1.4.9          # 4 столпа Ба Цзы (6tail)
+x-iztro==0.6.1               # карта 紫微 (порт iztro, Rust-ядро, abi3-wheels)
+caltib==0.3.2                # Лосар Пхугпа (Янсон, целочисленная арифметика)
+pyhd @ git+https://github.com/ppo/pyhd@d80aef667e561fb588dd883f8ce39ceea9593a12   # Дизайн Человека (pyswisseph); на PyPI нет — закреплён коммит
+dashaflow==1.5.1             # Джйотиш: Лагна, грахи, накшатры, Вимшоттари (pyswisseph, Лахири)
+# kinqimen пинит ephem==4.1.3 (конфликт с ephem 4.2.1) — ставить отдельно без зависимостей:
+#   .venv/bin/pip install --no-deps sxtwl==2.0.7 kinqimen==0.0.6.6      (setup.sh --with-oracles делает это сам)

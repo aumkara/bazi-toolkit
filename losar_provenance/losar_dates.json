@@ -1,0 +1,2702 @@
+{
+ "tradition": "phugpa",
+ "description": "Даты Лосара (1-й день тибетского года) по традиции Пхугпа (phug-lugs) — лхасский стандарт, календарь Далай-ламы/ЦТА/Мен-ци-кханга. Григорианские даты (пролептически-григорианских дат нет: весь диапазон >1582).",
+ "generated": "2026-07-15",
+ "range": [
+  1900,
+  2100
+ ],
+ "method": "Точная реализация формул Janson (arXiv:1401.6285) в рациональной арифметике; верифицирована: (1) печатная Таблица 1 статьи — 120/120 дат 1927-2046; (2) печатная таблица T4Losar 2000-2030 — 31/31 строк (Пхугпа и Цурпху); (3) 5 текстовых якорей статьи (1954, 1992, 2000, 2019, 2095); (4) инвариантность эпохи E806 vs E1927; (5) независимая линия кода Edward Henning (tibcalendar, BSD) — 201/201 (Пхугпа) и 201/201 (Цурпху) за 1900-2100; (6) независимое кодирование Calendar::Phugpa (Perl) — 201/201; (7) реальные анонсы/празднования 25 лет из 1998-2027 — все совпали; (8) исторический якорь: интронизация ДЛ XIV 22.02.1940 = 14-й день 1-го месяца — точно.",
+ "confidence_legend": {
+  "confirmed-2+": "≥2 независимых линии: печатная академическая таблица Janson + независимая кодовая линия Henning (tibcalendar); для многих лет добавочно реальные анонсы (поле sources)",
+  "computed-only": "только расчёт (две независимые кодовые линии согласны, но ни печатного, ни 'празднованного' источника не найдено)"
+ },
+ "rows": [
+  {
+   "year": 1900,
+   "losar": "1900-03-02",
+   "year_name": "Iron-Mouse",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1901,
+   "losar": "1901-02-20",
+   "year_name": "Iron-Ox",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ],
+   "note": "Лосар = лунный день 2 (день 1 пропущен) — вычислено, обе линии кода согласны"
+  },
+  {
+   "year": 1902,
+   "losar": "1902-02-09",
+   "year_name": "Water-Tiger",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1903,
+   "losar": "1903-02-28",
+   "year_name": "Water-Rabbit",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1904,
+   "losar": "1904-02-17",
+   "year_name": "Wood-Dragon",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1905,
+   "losar": "1905-02-05",
+   "year_name": "Wood-Snake",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1906,
+   "losar": "1906-02-24",
+   "year_name": "Fire-Horse",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1907,
+   "losar": "1907-02-13",
+   "year_name": "Fire-Sheep",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1908,
+   "losar": "1908-03-03",
+   "year_name": "Earth-Monkey",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1909,
+   "losar": "1909-02-21",
+   "year_name": "Earth-Bird",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1910,
+   "losar": "1910-02-10",
+   "year_name": "Iron-Dog",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1911,
+   "losar": "1911-03-01",
+   "year_name": "Iron-Pig",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1912,
+   "losar": "1912-02-19",
+   "year_name": "Water-Mouse",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1913,
+   "losar": "1913-02-07",
+   "year_name": "Water-Ox",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1914,
+   "losar": "1914-02-25",
+   "year_name": "Wood-Tiger",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1915,
+   "losar": "1915-02-15",
+   "year_name": "Wood-Rabbit",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1916,
+   "losar": "1916-02-04",
+   "year_name": "Fire-Dragon",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1917,
+   "losar": "1917-02-22",
+   "year_name": "Fire-Snake",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1918,
+   "losar": "1918-02-12",
+   "year_name": "Earth-Horse",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1919,
+   "losar": "1919-03-03",
+   "year_name": "Earth-Sheep",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1920,
+   "losar": "1920-02-20",
+   "year_name": "Iron-Monkey",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1921,
+   "losar": "1921-02-08",
+   "year_name": "Iron-Bird",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1922,
+   "losar": "1922-02-27",
+   "year_name": "Water-Dog",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1923,
+   "losar": "1923-02-16",
+   "year_name": "Water-Pig",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1924,
+   "losar": "1924-02-05",
+   "year_name": "Wood-Mouse",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1925,
+   "losar": "1925-02-23",
+   "year_name": "Wood-Ox",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1926,
+   "losar": "1926-02-13",
+   "year_name": "Fire-Tiger",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1927,
+   "losar": "1927-03-04",
+   "year_name": "Fire-Rabbit",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1928,
+   "losar": "1928-02-22",
+   "year_name": "Earth-Dragon",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1929,
+   "losar": "1929-02-10",
+   "year_name": "Earth-Snake",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1930,
+   "losar": "1930-03-01",
+   "year_name": "Iron-Horse",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1931,
+   "losar": "1931-02-18",
+   "year_name": "Iron-Sheep",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1932,
+   "losar": "1932-02-07",
+   "year_name": "Water-Monkey",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1933,
+   "losar": "1933-02-25",
+   "year_name": "Water-Bird",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1934,
+   "losar": "1934-02-14",
+   "year_name": "Wood-Dog",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1935,
+   "losar": "1935-02-04",
+   "year_name": "Wood-Pig",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1936,
+   "losar": "1936-02-23",
+   "year_name": "Fire-Mouse",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1937,
+   "losar": "1937-02-12",
+   "year_name": "Fire-Ox",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1938,
+   "losar": "1938-03-03",
+   "year_name": "Earth-Tiger",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1939,
+   "losar": "1939-02-20",
+   "year_name": "Earth-Rabbit",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1940,
+   "losar": "1940-02-09",
+   "year_name": "Iron-Dragon",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed",
+    "HISTORICAL: интронизация Далай-ламы XIV = 14-й день 1-го месяца Железного Дракона = 1940-02-22 (tibet.net, dalailama.com chronology); движок воспроизводит соответствие точно"
+   ]
+  },
+  {
+   "year": 1941,
+   "losar": "1941-02-26",
+   "year_name": "Iron-Snake",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1942,
+   "losar": "1942-02-16",
+   "year_name": "Water-Horse",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1943,
+   "losar": "1943-02-05",
+   "year_name": "Water-Sheep",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1944,
+   "losar": "1944-02-24",
+   "year_name": "Wood-Monkey",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1945,
+   "losar": "1945-02-13",
+   "year_name": "Wood-Bird",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1946,
+   "losar": "1946-03-04",
+   "year_name": "Fire-Dog",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1947,
+   "losar": "1947-02-21",
+   "year_name": "Fire-Pig",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1948,
+   "losar": "1948-02-10",
+   "year_name": "Earth-Mouse",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1949,
+   "losar": "1949-02-28",
+   "year_name": "Earth-Ox",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1950,
+   "losar": "1950-02-17",
+   "year_name": "Iron-Tiger",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1951,
+   "losar": "1951-02-07",
+   "year_name": "Iron-Rabbit",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1952,
+   "losar": "1952-02-26",
+   "year_name": "Water-Dragon",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1953,
+   "losar": "1953-02-14",
+   "year_name": "Water-Snake",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1954,
+   "losar": "1954-02-04",
+   "year_name": "Wood-Horse",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "janson-arxiv-1401.6285:text-anchor",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1955,
+   "losar": "1955-02-23",
+   "year_name": "Wood-Sheep",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1956,
+   "losar": "1956-02-12",
+   "year_name": "Fire-Monkey",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1957,
+   "losar": "1957-03-02",
+   "year_name": "Fire-Bird",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1958,
+   "losar": "1958-02-19",
+   "year_name": "Earth-Dog",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1959,
+   "losar": "1959-02-08",
+   "year_name": "Earth-Pig",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1960,
+   "losar": "1960-02-27",
+   "year_name": "Iron-Mouse",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1961,
+   "losar": "1961-02-16",
+   "year_name": "Iron-Ox",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1962,
+   "losar": "1962-02-05",
+   "year_name": "Water-Tiger",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1963,
+   "losar": "1963-02-24",
+   "year_name": "Water-Rabbit",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1964,
+   "losar": "1964-02-14",
+   "year_name": "Wood-Dragon",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1965,
+   "losar": "1965-03-04",
+   "year_name": "Wood-Snake",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1966,
+   "losar": "1966-02-21",
+   "year_name": "Fire-Horse",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1967,
+   "losar": "1967-02-10",
+   "year_name": "Fire-Sheep",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1968,
+   "losar": "1968-02-29",
+   "year_name": "Earth-Monkey",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1969,
+   "losar": "1969-02-17",
+   "year_name": "Earth-Bird",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1970,
+   "losar": "1970-02-07",
+   "year_name": "Iron-Dog",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1971,
+   "losar": "1971-02-26",
+   "year_name": "Iron-Pig",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1972,
+   "losar": "1972-02-15",
+   "year_name": "Water-Mouse",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1973,
+   "losar": "1973-03-05",
+   "year_name": "Water-Ox",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1974,
+   "losar": "1974-02-22",
+   "year_name": "Wood-Tiger",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1975,
+   "losar": "1975-02-11",
+   "year_name": "Wood-Rabbit",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1976,
+   "losar": "1976-03-01",
+   "year_name": "Fire-Dragon",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1977,
+   "losar": "1977-02-19",
+   "year_name": "Fire-Snake",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ],
+   "note": "Лосар = лунный день 2 (день 1 пропущен); независимо отмечено в комментариях кода tibcalendar ('Phugpa 1/1/1977: first day is omitted')"
+  },
+  {
+   "year": 1978,
+   "losar": "1978-02-08",
+   "year_name": "Earth-Horse",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1979,
+   "losar": "1979-02-27",
+   "year_name": "Earth-Sheep",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1980,
+   "losar": "1980-02-17",
+   "year_name": "Iron-Monkey",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1981,
+   "losar": "1981-02-05",
+   "year_name": "Iron-Bird",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1982,
+   "losar": "1982-02-24",
+   "year_name": "Water-Dog",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1983,
+   "losar": "1983-02-13",
+   "year_name": "Water-Pig",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1984,
+   "losar": "1984-03-03",
+   "year_name": "Wood-Mouse",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1985,
+   "losar": "1985-02-20",
+   "year_name": "Wood-Ox",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1986,
+   "losar": "1986-02-09",
+   "year_name": "Fire-Tiger",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1987,
+   "losar": "1987-02-28",
+   "year_name": "Fire-Rabbit",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1988,
+   "losar": "1988-02-18",
+   "year_name": "Earth-Dragon",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1989,
+   "losar": "1989-02-07",
+   "year_name": "Earth-Snake",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1990,
+   "losar": "1990-02-26",
+   "year_name": "Iron-Horse",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1991,
+   "losar": "1991-02-15",
+   "year_name": "Iron-Sheep",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1992,
+   "losar": "1992-03-05",
+   "year_name": "Water-Monkey",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "janson-arxiv-1401.6285:text-anchor",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1993,
+   "losar": "1993-02-22",
+   "year_name": "Water-Bird",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1994,
+   "losar": "1994-02-11",
+   "year_name": "Wood-Dog",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1995,
+   "losar": "1995-03-02",
+   "year_name": "Wood-Pig",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1996,
+   "losar": "1996-02-19",
+   "year_name": "Fire-Mouse",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1997,
+   "losar": "1997-02-08",
+   "year_name": "Fire-Ox",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 1998,
+   "losar": "1998-02-27",
+   "year_name": "Earth-Tiger",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed",
+    "karmakagyucalendar.org: Earth Tiger year began 1998-02-27 (источник традиции Цурпху; в этот год даты школ совпадают)"
+   ]
+  },
+  {
+   "year": 1999,
+   "losar": "1999-02-17",
+   "year_name": "Earth-Rabbit",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed",
+    "karmakagyucalendar.org: Earth Rabbit year began 1999-02-17"
+   ]
+  },
+  {
+   "year": 2000,
+   "losar": "2000-02-06",
+   "year_name": "Iron-Dragon",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "janson-arxiv-1401.6285:TableT4Losar(printed,2000-2030)",
+    "janson-arxiv-1401.6285:text-anchor",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed",
+    "Ven. Salden 'The story of Losar' (монастырь Далай-ламы), цит. в Janson: Лосар праздновался в воскресенье 2000-02-06, первый день ВСТАВНОГО месяца 1",
+    "karmakagyucalendar.org: Earth Rabbit year ended 2000-02-05 (косвенно => НГ 2000-02-06)"
+   ],
+   "note": "год начался со ВСТАВНОГО месяца 1 (ix=48); Лосар = 1-й день вставного месяца 1 (печатно у Janson + Salden)"
+  },
+  {
+   "year": 2001,
+   "losar": "2001-02-24",
+   "year_name": "Iron-Snake",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "janson-arxiv-1401.6285:TableT4Losar(printed,2000-2030)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2002,
+   "losar": "2002-02-13",
+   "year_name": "Water-Horse",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "janson-arxiv-1401.6285:TableT4Losar(printed,2000-2030)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2003,
+   "losar": "2003-03-03",
+   "year_name": "Water-Sheep",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "janson-arxiv-1401.6285:TableT4Losar(printed,2000-2030)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed",
+    "tibet.net 'A Quiet Losar: This time' (Water Sheep, 2003-03-03)",
+    "moonwise.co.uk/year/2130tibetan.htm: год 2130 начался 2003-03-03"
+   ]
+  },
+  {
+   "year": 2004,
+   "losar": "2004-02-21",
+   "year_name": "Wood-Monkey",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "janson-arxiv-1401.6285:TableT4Losar(printed,2000-2030)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2005,
+   "losar": "2005-02-09",
+   "year_name": "Wood-Bird",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "janson-arxiv-1401.6285:TableT4Losar(printed,2000-2030)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2006,
+   "losar": "2006-02-28",
+   "year_name": "Fire-Dog",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "janson-arxiv-1401.6285:TableT4Losar(printed,2000-2030)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed",
+    "FPMT (facebook.com/FPMTINC): 'The Tibetan New Year, Losar, falls on February 28 this year' (2006)",
+    "ПРОТИВОРЕЧИЕ: FPMT Mandala magazine (июнь 2006) пишет 'The New Year officially began March 1' — см. caveats"
+   ],
+   "note": "внешние источники расходятся на 1 день: FPMT-FB=28.02, FPMT-Mandala='официально 1 марта'; расчёт (Janson печатно + Henning-код) = 28.02"
+  },
+  {
+   "year": 2007,
+   "losar": "2007-02-18",
+   "year_name": "Fire-Pig",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "janson-arxiv-1401.6285:TableT4Losar(printed,2000-2030)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2008,
+   "losar": "2008-02-07",
+   "year_name": "Earth-Mouse",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "janson-arxiv-1401.6285:TableT4Losar(printed,2000-2030)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed",
+    "phayul.com 2008-02-05 'The Story of Tibetan New Year' (Лосар 2008-02-07)",
+    "kagyuoffice.org 'Welcome to the Year of the Earth Mouse'"
+   ]
+  },
+  {
+   "year": 2009,
+   "losar": "2009-02-25",
+   "year_name": "Earth-Ox",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "janson-arxiv-1401.6285:TableT4Losar(printed,2000-2030)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed",
+    "chinaculture.org 2009-02-25 'Losar Festival — The Tibetan New Year' (Earth Ox начался 2009-02-25)",
+    "tibetanbuddhistencyclopedia.com 'Astrology for Tibetan New Year 2009'"
+   ]
+  },
+  {
+   "year": 2010,
+   "losar": "2010-02-14",
+   "year_name": "Iron-Tiger",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "janson-arxiv-1401.6285:TableT4Losar(printed,2000-2030)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed",
+    "palyul.org/wp/2010/02/14/losar-2010 (дата в URL)",
+    "trace.org 'Losar 2010: Year of the Iron Tiger'",
+    "friends-of-tibet.org: община отмечала Лосар в воскресенье 2010-02-14"
+   ]
+  },
+  {
+   "year": 2011,
+   "losar": "2011-03-05",
+   "year_name": "Iron-Rabbit",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "janson-arxiv-1401.6285:TableT4Losar(printed,2000-2030)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed",
+    "chinabuddhismencyclopedia.com 'Astrology for Tibetan New Year 2011': 'first day … falls on March 5, 2011' (Iron Rabbit 2138)",
+    "gebchakgonpa.org 'Tibetan New Year 2011'"
+   ]
+  },
+  {
+   "year": 2012,
+   "losar": "2012-02-22",
+   "year_name": "Water-Dragon",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "janson-arxiv-1401.6285:TableT4Losar(printed,2000-2030)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed",
+    "kagyuoffice.org (офиц. сайт Кармапы) 'Losar: The Year of the Water Dragon Begins' (2012-02-22; в этот год Пхугпа и Цурпху совпадают)",
+    "dharmawheel.net 'Setting up Shrine for Water Dragon Losar 2139'"
+   ]
+  },
+  {
+   "year": 2013,
+   "losar": "2013-02-11",
+   "year_name": "Water-Snake",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "janson-arxiv-1401.6285:TableT4Losar(printed,2000-2030)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed",
+    "tsegyalgar.blogspot.com 'Losar Year of the Water Snake 2140' (2013-02-11)",
+    "chinadaily.com.cn 2013-02-10 'Unraveling the mystery of Tibetan calendar'"
+   ]
+  },
+  {
+   "year": 2014,
+   "losar": "2014-03-02",
+   "year_name": "Wood-Horse",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "janson-arxiv-1401.6285:TableT4Losar(printed,2000-2030)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed",
+    "jampaling.org 'Tibetan New Year (LOSAR) Celebration 2014' (2014-03-02)",
+    "tibet.net 'Tibetans across the world celebrate Losar'",
+    "tras.ca 'Losar — Wood Horse Year'"
+   ]
+  },
+  {
+   "year": 2015,
+   "losar": "2015-02-19",
+   "year_name": "Wood-Sheep",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "janson-arxiv-1401.6285:TableT4Losar(printed,2000-2030)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed",
+    "gtu.edu 'In Celebration of Tibetan Year 2142: Year of the Wood Sheep' (началась 2015-02-19)",
+    "socaltibet.org 'Happy Tibetan New Year (Losar) 2142'",
+    "tibet.net '2015 Losar Tsedor at Tsuklakhang'"
+   ]
+  },
+  {
+   "year": 2016,
+   "losar": "2016-02-09",
+   "year_name": "Fire-Monkey",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "janson-arxiv-1401.6285:TableT4Losar(printed,2000-2030)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed",
+    "tibetrelieffund.co.uk 'Losar 2016: The Year of the Fire Monkey' (2016-02-09)",
+    "tibet.net 'Sikyong's Greeting on Losar'"
+   ]
+  },
+  {
+   "year": 2017,
+   "losar": "2017-02-27",
+   "year_name": "Fire-Bird",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "janson-arxiv-1401.6285:TableT4Losar(printed,2000-2030)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed",
+    "himalayan-foundation.org blog 2017-02-27 'Happy Year of the Fire Rooster!'",
+    "atiling.org 'Losar 2017: Year of the Fire Bird'",
+    "internationalbuddhistacademy.org 'Losar 2017' (празднование 27.02–01.03)"
+   ]
+  },
+  {
+   "year": 2018,
+   "losar": "2018-02-16",
+   "year_name": "Earth-Dog",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "janson-arxiv-1401.6285:TableT4Losar(printed,2000-2030)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed",
+    "himalayan-foundation.org blog 2018-02-16 'Happy Losar! Tibetan Year of the Earth Dog'",
+    "tibet.net 'Dharamshala Celebrates Tibetan New Year (Losar — Year of the Earth Dog)'",
+    "ripaladrang.org 'Happy New Year Of The Earth Dog 2145'"
+   ]
+  },
+  {
+   "year": 2019,
+   "losar": "2019-02-05",
+   "year_name": "Earth-Pig",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "janson-arxiv-1401.6285:TableT4Losar(printed,2000-2030)",
+    "janson-arxiv-1401.6285:text-anchor",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed",
+    "tibet.net 'HH the Dalai Lama wishes everyone on Losar — Year of Earth Pig 2146' (2019-02-05)",
+    "groups.io/riwoche: 'LOSAR — Tibetan New Year 2146 — Year of the Earth Pig — Tue, 02/05/2019'",
+    "maitripa.org 'Losar 2019'"
+   ],
+   "note": "год начался со вставного месяца 1 (ix=49; печатная таблица T4Leap)"
+  },
+  {
+   "year": 2020,
+   "losar": "2020-02-24",
+   "year_name": "Iron-Mouse",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "janson-arxiv-1401.6285:TableT4Losar(printed,2000-2030)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed",
+    "himalayan-foundation.org blog 2020-02-24 'Happy Losar! Year of the Iron Mouse'",
+    "lionsroardharmacenter.org 'Losar 2020: Year of the Iron Mouse 2147' (понедельник 24.02.2020)",
+    "sakya.org 'Losar (Tibetan New Year) Prayers' (2020)"
+   ]
+  },
+  {
+   "year": 2021,
+   "losar": "2021-02-12",
+   "year_name": "Iron-Ox",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "janson-arxiv-1401.6285:TableT4Losar(printed,2000-2030)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed",
+    "threeriverstibetancc.org 2021/02/12 'Happy Tibetan New Year Losar Celebration 2021'",
+    "akasha.nalandabodhi.org 2021/02/12 'Losar 2021' (Iron Ox 2148)",
+    "emahofoundation.org 'Tibetan New Year Celebration. Feb 12th'"
+   ]
+  },
+  {
+   "year": 2022,
+   "losar": "2022-03-03",
+   "year_name": "Water-Tiger",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "janson-arxiv-1401.6285:TableT4Losar(printed,2000-2030)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed",
+    "tibet.net 'Central Tibetan Administration celebrates Tibetan Losar — the year of Water Tiger, 2149' (2022-03-03)",
+    "buddhaweekly.com 'Losar 2022 … March 3, 2022'",
+    "tnp.org 'Losar or Tibetan New Year 2022'"
+   ]
+  },
+  {
+   "year": 2023,
+   "losar": "2023-02-21",
+   "year_name": "Water-Rabbit",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "janson-arxiv-1401.6285:TableT4Losar(printed,2000-2030)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed",
+    "tibet.net 'CTA Celebrates Tibetan Losar — the Year of Water Rabbit' (2023-02-21)",
+    "himalayan-foundation.org blog 2023-02-21",
+    "mn.gov: прокламация губернатора Миннесоты 'Tibetan New Year Losar Day' 02.21.23",
+    "Xinhua (english.news.cn) 2023-02-21 'Tibetan New Year marked with joy and hope'"
+   ]
+  },
+  {
+   "year": 2024,
+   "losar": "2024-02-10",
+   "year_name": "Wood-Dragon",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "janson-arxiv-1401.6285:TableT4Losar(printed,2000-2030)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed",
+    "tibet.net 'CTA Celebrates Tibetan Losar — the Year of Wood Dragon' (2024-02-10)",
+    "kadampa-center.org 'Tibetan New Year — Year of the Wood Dragon — 2024'",
+    "tibetrelieffund.co.uk 'Happy Losar! — The year of the wood dragon'"
+   ]
+  },
+  {
+   "year": 2025,
+   "losar": "2025-02-28",
+   "year_name": "Wood-Snake",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "janson-arxiv-1401.6285:TableT4Losar(printed,2000-2030)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed",
+    "buddhaweekly.com 'Happy LOSAR! … Feb 28, 2025, Year of the Wood Snake'",
+    "sukhasiddhi.org 'Losar 2025: Celebrating the Tibetan New Year'",
+    "maitripa.org 'Losar, Tibetan New Year (Year of the Wood Snake)' (2025)"
+   ]
+  },
+  {
+   "year": 2026,
+   "losar": "2026-02-18",
+   "year_name": "Fire-Horse",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "janson-arxiv-1401.6285:TableT4Losar(printed,2000-2030)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed",
+    "drepung.org 'Tibetan New Year 2153 — Fire Horse' (2026-02-18)",
+    "tnp.org 'Important Tibetan Buddhist Holidays in 2026' (Лосар 18.02.2026)",
+    "ripa-international.com 'LOSAR 2026 … 2153'",
+    "newsonair.gov.in 'Losar Festival from 18–20 February Marks Start of Fire Horse Year'"
+   ]
+  },
+  {
+   "year": 2027,
+   "losar": "2027-02-07",
+   "year_name": "Fire-Sheep",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "janson-arxiv-1401.6285:TableT4Losar(printed,2000-2030)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed",
+    "nationaltoday.com 'LOSAR — February 7, 2027'",
+    "gototibet.com 'Tibetan New Year 2027 — Dates' (2027-02-07)",
+    "officeholidays.com 'Losar around the world in 2027'"
+   ]
+  },
+  {
+   "year": 2028,
+   "losar": "2028-02-26",
+   "year_name": "Earth-Monkey",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "janson-arxiv-1401.6285:TableT4Losar(printed,2000-2030)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2029,
+   "losar": "2029-02-14",
+   "year_name": "Earth-Bird",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "janson-arxiv-1401.6285:TableT4Losar(printed,2000-2030)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2030,
+   "losar": "2030-03-05",
+   "year_name": "Iron-Dog",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "janson-arxiv-1401.6285:TableT4Losar(printed,2000-2030)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2031,
+   "losar": "2031-02-22",
+   "year_name": "Iron-Pig",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2032,
+   "losar": "2032-02-12",
+   "year_name": "Water-Mouse",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2033,
+   "losar": "2033-03-02",
+   "year_name": "Water-Ox",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2034,
+   "losar": "2034-02-19",
+   "year_name": "Wood-Tiger",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2035,
+   "losar": "2035-02-09",
+   "year_name": "Wood-Rabbit",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2036,
+   "losar": "2036-02-27",
+   "year_name": "Fire-Dragon",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2037,
+   "losar": "2037-02-15",
+   "year_name": "Fire-Snake",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2038,
+   "losar": "2038-03-06",
+   "year_name": "Earth-Horse",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2039,
+   "losar": "2039-02-23",
+   "year_name": "Earth-Sheep",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2040,
+   "losar": "2040-02-13",
+   "year_name": "Iron-Monkey",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2041,
+   "losar": "2041-03-03",
+   "year_name": "Iron-Bird",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2042,
+   "losar": "2042-02-21",
+   "year_name": "Water-Dog",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2043,
+   "losar": "2043-02-10",
+   "year_name": "Water-Pig",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2044,
+   "losar": "2044-02-29",
+   "year_name": "Wood-Mouse",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2045,
+   "losar": "2045-02-17",
+   "year_name": "Wood-Ox",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2046,
+   "losar": "2046-02-06",
+   "year_name": "Fire-Tiger",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:Table1(printed,1927-2046)",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2047,
+   "losar": "2047-02-25",
+   "year_name": "Fire-Rabbit",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2048,
+   "losar": "2048-02-14",
+   "year_name": "Earth-Dragon",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2049,
+   "losar": "2049-03-04",
+   "year_name": "Earth-Snake",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2050,
+   "losar": "2050-02-22",
+   "year_name": "Iron-Horse",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2051,
+   "losar": "2051-02-12",
+   "year_name": "Iron-Sheep",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2052,
+   "losar": "2052-03-02",
+   "year_name": "Water-Monkey",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2053,
+   "losar": "2053-02-19",
+   "year_name": "Water-Bird",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2054,
+   "losar": "2054-02-08",
+   "year_name": "Wood-Dog",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2055,
+   "losar": "2055-02-27",
+   "year_name": "Wood-Pig",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2056,
+   "losar": "2056-02-16",
+   "year_name": "Fire-Mouse",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2057,
+   "losar": "2057-03-06",
+   "year_name": "Fire-Ox",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2058,
+   "losar": "2058-02-23",
+   "year_name": "Earth-Tiger",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2059,
+   "losar": "2059-02-13",
+   "year_name": "Earth-Rabbit",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2060,
+   "losar": "2060-03-03",
+   "year_name": "Iron-Dragon",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2061,
+   "losar": "2061-02-21",
+   "year_name": "Iron-Snake",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2062,
+   "losar": "2062-02-10",
+   "year_name": "Water-Horse",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2063,
+   "losar": "2063-03-01",
+   "year_name": "Water-Sheep",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2064,
+   "losar": "2064-02-18",
+   "year_name": "Wood-Monkey",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2065,
+   "losar": "2065-02-06",
+   "year_name": "Wood-Bird",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ],
+   "note": "год начинается со вставного месяца 1 (65-летний цикл от 2000)"
+  },
+  {
+   "year": 2066,
+   "losar": "2066-02-25",
+   "year_name": "Fire-Dog",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2067,
+   "losar": "2067-02-14",
+   "year_name": "Fire-Pig",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2068,
+   "losar": "2068-03-04",
+   "year_name": "Earth-Mouse",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2069,
+   "losar": "2069-02-22",
+   "year_name": "Earth-Ox",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2070,
+   "losar": "2070-02-11",
+   "year_name": "Iron-Tiger",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2071,
+   "losar": "2071-03-02",
+   "year_name": "Iron-Rabbit",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2072,
+   "losar": "2072-02-19",
+   "year_name": "Water-Dragon",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2073,
+   "losar": "2073-02-07",
+   "year_name": "Water-Snake",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2074,
+   "losar": "2074-02-26",
+   "year_name": "Wood-Horse",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2075,
+   "losar": "2075-02-16",
+   "year_name": "Wood-Sheep",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2076,
+   "losar": "2076-03-06",
+   "year_name": "Fire-Monkey",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2077,
+   "losar": "2077-02-23",
+   "year_name": "Fire-Bird",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2078,
+   "losar": "2078-02-13",
+   "year_name": "Earth-Dog",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2079,
+   "losar": "2079-03-04",
+   "year_name": "Earth-Pig",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2080,
+   "losar": "2080-02-21",
+   "year_name": "Iron-Mouse",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2081,
+   "losar": "2081-02-09",
+   "year_name": "Iron-Ox",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2082,
+   "losar": "2082-02-28",
+   "year_name": "Water-Tiger",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2083,
+   "losar": "2083-02-17",
+   "year_name": "Water-Rabbit",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2084,
+   "losar": "2084-02-07",
+   "year_name": "Wood-Dragon",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ],
+   "note": "Лосар = лунный день 2 (день 1 пропущен) — вычислено; год начинается со вставного месяца 1"
+  },
+  {
+   "year": 2085,
+   "losar": "2085-02-25",
+   "year_name": "Wood-Snake",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2086,
+   "losar": "2086-02-14",
+   "year_name": "Fire-Horse",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2087,
+   "losar": "2087-03-05",
+   "year_name": "Fire-Sheep",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2088,
+   "losar": "2088-02-23",
+   "year_name": "Earth-Monkey",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2089,
+   "losar": "2089-02-11",
+   "year_name": "Earth-Bird",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2090,
+   "losar": "2090-03-02",
+   "year_name": "Iron-Dog",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2091,
+   "losar": "2091-02-19",
+   "year_name": "Iron-Pig",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2092,
+   "losar": "2092-02-08",
+   "year_name": "Water-Mouse",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2093,
+   "losar": "2093-02-26",
+   "year_name": "Water-Ox",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2094,
+   "losar": "2094-02-16",
+   "year_name": "Wood-Tiger",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2095,
+   "losar": "2095-03-07",
+   "year_name": "Wood-Rabbit",
+   "confidence": "confirmed-2+",
+   "sources": [
+    "janson-arxiv-1401.6285:text-anchor",
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2096,
+   "losar": "2096-02-24",
+   "year_name": "Fire-Dragon",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2097,
+   "losar": "2097-02-13",
+   "year_name": "Fire-Snake",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2098,
+   "losar": "2098-03-03",
+   "year_name": "Earth-Horse",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2099,
+   "losar": "2099-02-20",
+   "year_name": "Earth-Sheep",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  },
+  {
+   "year": 2100,
+   "losar": "2100-02-10",
+   "year_name": "Iron-Monkey",
+   "confidence": "computed-only",
+   "sources": [
+    "tibcalendar(Henning-lineage-C-code,BSD,github.com/lscalendars/tibcalendar):computed",
+    "phugpa.py(this-work,Janson-formulas,exact-rational):computed"
+   ]
+  }
+ ],
+ "school_divergences": {
+  "summary": "Пхугпа vs Цурпху (Карма Кагью): расхождения двух видов — (а) ~на месяц (другое правило вставного месяца: Пхугпа ix∈{48,49}, Цурпху ix∈{0,1}), (б) на 1 день (разные эпохальные константы => другие пропущенные/удвоенные дни). За 1900-2100: 41 расхождение на месяц + 13 на день (вычислено, обе кодовые линии согласны). Монголия (Новый Генден): вставные месяцы = Цурпху; НГ отличался от Цурпху только в 1900 (31/1 vs 1/2) и следующий раз в 2161 (26/2 vs 25/2) [печатно у Janson]. Бон: календарь = Пхугпа (Janson App.A.1 со ссылкой на Berzin). Бутан: своя нумерация вставных месяцев; НГ чаще совпадает с Пхугпа, иногда с Цурпху (см. printed_2000_2030). Цаган Сар в Монголии и китайский НГ — отдельные системы, НЕ равные Лосару.",
+  "printed_2000_2030_divergent_years": [
+   {
+    "year": 2003,
+    "phugpa": "2003-03-03",
+    "tsurphu": "2003-02-02",
+    "mongolia": "2003-02-02",
+    "bhutan": "2003-03-04"
+   },
+   {
+    "year": 2006,
+    "phugpa": "2006-02-28",
+    "tsurphu": "2006-01-30",
+    "mongolia": "2006-01-30",
+    "bhutan": "2006-02-28"
+   },
+   {
+    "year": 2008,
+    "phugpa": "2008-02-07",
+    "tsurphu": "2008-02-08",
+    "mongolia": "2008-02-08",
+    "bhutan": "2008-02-08"
+   },
+   {
+    "year": 2011,
+    "phugpa": "2011-03-05",
+    "tsurphu": "2011-02-03",
+    "mongolia": "2011-02-03",
+    "bhutan": "2011-02-03"
+   },
+   {
+    "year": 2014,
+    "phugpa": "2014-03-02",
+    "tsurphu": "2014-01-31",
+    "mongolia": "2014-01-31",
+    "bhutan": "2014-03-02"
+   },
+   {
+    "year": 2022,
+    "phugpa": "2022-03-03",
+    "tsurphu": "2022-02-02",
+    "mongolia": "2022-02-02",
+    "bhutan": "2022-03-03"
+   },
+   {
+    "year": 2025,
+    "phugpa": "2025-02-28",
+    "tsurphu": "2025-03-01",
+    "mongolia": "2025-03-01",
+    "bhutan": "2025-02-28"
+   },
+   {
+    "year": 2030,
+    "phugpa": "2030-03-05",
+    "tsurphu": "2030-02-03",
+    "mongolia": "2030-02-03",
+    "bhutan": "2030-02-03"
+   }
+  ],
+  "printed_note": "Остальные годы 2000-2030 у всех четырёх версий совпадают (печатная таблица T4Losar в Janson).",
+  "phugpa_vs_tsurphu_1900_2100_computed": [
+   {
+    "year": 1900,
+    "phugpa": "1900-03-02",
+    "tsurphu": "1900-01-31",
+    "diff_days": 30
+   },
+   {
+    "year": 1903,
+    "phugpa": "1903-02-28",
+    "tsurphu": "1903-01-29",
+    "diff_days": 30
+   },
+   {
+    "year": 1908,
+    "phugpa": "1908-03-03",
+    "tsurphu": "1908-02-03",
+    "diff_days": 29
+   },
+   {
+    "year": 1911,
+    "phugpa": "1911-03-01",
+    "tsurphu": "1911-01-31",
+    "diff_days": 29
+   },
+   {
+    "year": 1919,
+    "phugpa": "1919-03-03",
+    "tsurphu": "1919-02-01",
+    "diff_days": 30
+   },
+   {
+    "year": 1922,
+    "phugpa": "1922-02-27",
+    "tsurphu": "1922-01-28",
+    "diff_days": 30
+   },
+   {
+    "year": 1925,
+    "phugpa": "1925-02-23",
+    "tsurphu": "1925-02-24",
+    "diff_days": -1
+   },
+   {
+    "year": 1927,
+    "phugpa": "1927-03-04",
+    "tsurphu": "1927-02-03",
+    "diff_days": 29
+   },
+   {
+    "year": 1930,
+    "phugpa": "1930-03-01",
+    "tsurphu": "1930-01-30",
+    "diff_days": 30
+   },
+   {
+    "year": 1938,
+    "phugpa": "1938-03-03",
+    "tsurphu": "1938-02-01",
+    "diff_days": 30
+   },
+   {
+    "year": 1941,
+    "phugpa": "1941-02-26",
+    "tsurphu": "1941-01-28",
+    "diff_days": 29
+   },
+   {
+    "year": 1944,
+    "phugpa": "1944-02-24",
+    "tsurphu": "1944-02-25",
+    "diff_days": -1
+   },
+   {
+    "year": 1946,
+    "phugpa": "1946-03-04",
+    "tsurphu": "1946-02-03",
+    "diff_days": 29
+   },
+   {
+    "year": 1949,
+    "phugpa": "1949-02-28",
+    "tsurphu": "1949-01-29",
+    "diff_days": 30
+   },
+   {
+    "year": 1953,
+    "phugpa": "1953-02-14",
+    "tsurphu": "1953-02-15",
+    "diff_days": -1
+   },
+   {
+    "year": 1957,
+    "phugpa": "1957-03-02",
+    "tsurphu": "1957-01-31",
+    "diff_days": 30
+   },
+   {
+    "year": 1963,
+    "phugpa": "1963-02-24",
+    "tsurphu": "1963-02-25",
+    "diff_days": -1
+   },
+   {
+    "year": 1965,
+    "phugpa": "1965-03-04",
+    "tsurphu": "1965-02-02",
+    "diff_days": 30
+   },
+   {
+    "year": 1968,
+    "phugpa": "1968-02-29",
+    "tsurphu": "1968-01-30",
+    "diff_days": 30
+   },
+   {
+    "year": 1973,
+    "phugpa": "1973-03-05",
+    "tsurphu": "1973-02-04",
+    "diff_days": 29
+   },
+   {
+    "year": 1974,
+    "phugpa": "1974-02-22",
+    "tsurphu": "1974-02-23",
+    "diff_days": -1
+   },
+   {
+    "year": 1975,
+    "phugpa": "1975-02-11",
+    "tsurphu": "1975-02-12",
+    "diff_days": -1
+   },
+   {
+    "year": 1976,
+    "phugpa": "1976-03-01",
+    "tsurphu": "1976-02-01",
+    "diff_days": 29
+   },
+   {
+    "year": 1984,
+    "phugpa": "1984-03-03",
+    "tsurphu": "1984-02-02",
+    "diff_days": 30
+   },
+   {
+    "year": 1987,
+    "phugpa": "1987-02-28",
+    "tsurphu": "1987-01-30",
+    "diff_days": 29
+   },
+   {
+    "year": 1992,
+    "phugpa": "1992-03-05",
+    "tsurphu": "1992-02-04",
+    "diff_days": 30
+   },
+   {
+    "year": 1995,
+    "phugpa": "1995-03-02",
+    "tsurphu": "1995-01-31",
+    "diff_days": 30
+   },
+   {
+    "year": 2003,
+    "phugpa": "2003-03-03",
+    "tsurphu": "2003-02-02",
+    "diff_days": 29
+   },
+   {
+    "year": 2006,
+    "phugpa": "2006-02-28",
+    "tsurphu": "2006-01-30",
+    "diff_days": 29
+   },
+   {
+    "year": 2008,
+    "phugpa": "2008-02-07",
+    "tsurphu": "2008-02-08",
+    "diff_days": -1
+   },
+   {
+    "year": 2011,
+    "phugpa": "2011-03-05",
+    "tsurphu": "2011-02-03",
+    "diff_days": 30
+   },
+   {
+    "year": 2014,
+    "phugpa": "2014-03-02",
+    "tsurphu": "2014-01-31",
+    "diff_days": 30
+   },
+   {
+    "year": 2022,
+    "phugpa": "2022-03-03",
+    "tsurphu": "2022-02-02",
+    "diff_days": 29
+   },
+   {
+    "year": 2025,
+    "phugpa": "2025-02-28",
+    "tsurphu": "2025-03-01",
+    "diff_days": -1
+   },
+   {
+    "year": 2030,
+    "phugpa": "2030-03-05",
+    "tsurphu": "2030-02-03",
+    "diff_days": 30
+   },
+   {
+    "year": 2033,
+    "phugpa": "2033-03-02",
+    "tsurphu": "2033-01-31",
+    "diff_days": 30
+   },
+   {
+    "year": 2036,
+    "phugpa": "2036-02-27",
+    "tsurphu": "2036-02-28",
+    "diff_days": -1
+   },
+   {
+    "year": 2037,
+    "phugpa": "2037-02-15",
+    "tsurphu": "2037-02-16",
+    "diff_days": -1
+   },
+   {
+    "year": 2038,
+    "phugpa": "2038-03-06",
+    "tsurphu": "2038-02-05",
+    "diff_days": 29
+   },
+   {
+    "year": 2039,
+    "phugpa": "2039-02-23",
+    "tsurphu": "2039-02-24",
+    "diff_days": -1
+   },
+   {
+    "year": 2041,
+    "phugpa": "2041-03-03",
+    "tsurphu": "2041-02-02",
+    "diff_days": 29
+   },
+   {
+    "year": 2049,
+    "phugpa": "2049-03-04",
+    "tsurphu": "2049-02-03",
+    "diff_days": 29
+   },
+   {
+    "year": 2052,
+    "phugpa": "2052-03-02",
+    "tsurphu": "2052-02-01",
+    "diff_days": 30
+   },
+   {
+    "year": 2057,
+    "phugpa": "2057-03-06",
+    "tsurphu": "2057-02-04",
+    "diff_days": 30
+   },
+   {
+    "year": 2060,
+    "phugpa": "2060-03-03",
+    "tsurphu": "2060-02-03",
+    "diff_days": 29
+   },
+   {
+    "year": 2068,
+    "phugpa": "2068-03-04",
+    "tsurphu": "2068-02-04",
+    "diff_days": 29
+   },
+   {
+    "year": 2070,
+    "phugpa": "2070-02-11",
+    "tsurphu": "2070-02-12",
+    "diff_days": -1
+   },
+   {
+    "year": 2071,
+    "phugpa": "2071-03-02",
+    "tsurphu": "2071-02-01",
+    "diff_days": 29
+   },
+   {
+    "year": 2076,
+    "phugpa": "2076-03-06",
+    "tsurphu": "2076-02-05",
+    "diff_days": 30
+   },
+   {
+    "year": 2079,
+    "phugpa": "2079-03-04",
+    "tsurphu": "2079-02-02",
+    "diff_days": 30
+   },
+   {
+    "year": 2087,
+    "phugpa": "2087-03-05",
+    "tsurphu": "2087-02-04",
+    "diff_days": 29
+   },
+   {
+    "year": 2095,
+    "phugpa": "2095-03-07",
+    "tsurphu": "2095-02-05",
+    "diff_days": 30
+   },
+   {
+    "year": 2098,
+    "phugpa": "2098-03-03",
+    "tsurphu": "2098-02-02",
+    "diff_days": 29
+   },
+   {
+    "year": 2099,
+    "phugpa": "2099-02-20",
+    "tsurphu": "2099-02-21",
+    "diff_days": -1
+   }
+  ],
+  "computed_note": "Список выше — расчёт (confidence=computed-only, кроме годов, покрытых печатной T4Losar); обе независимые кодовые линии (Janson-формулы и Henning-код) дают идентичные списки. Для карт рождения января-марта в годы из списка принадлежность года у Карма Кагью может отличаться от Пхугпа."
+ },
+ "algorithm": {
+  "paper": "Svante Janson, 'Tibetan calendar mathematics', arXiv:1401.6285 (v2 of 0710.0520), 2014-01-24; PDF: arxiv.org/pdf/1401.6285; полное извлечение формул: losar_algorithm.md (рядом с этим файлом)",
+  "losar_rule": "JD(Losar года Y) = 1 + JD(лунный день 30, регулярный месяц 12, года Y-1); JD(тиб.дата) = floor(true_date)",
+  "core_constants_epoch_E806_phugpa": {
+   "Y0": 806,
+   "M0": 3,
+   "beta_star": 61,
+   "m1": "167025/5656",
+   "m2": "11135/11312",
+   "m0": "2015501 + 4783/5656",
+   "s1": "65/804",
+   "s2": "13/4824",
+   "s0": "743/804",
+   "a1": "253/3528",
+   "a2": "1/28",
+   "a0": "475/3528",
+   "moon_tab_0_7": [
+    0,
+    5,
+    10,
+    15,
+    19,
+    22,
+    24,
+    25
+   ],
+   "sun_tab_0_3": [
+    0,
+    6,
+    10,
+    11
+   ],
+   "leap_month_rule": "ix = (2*(12*(Y-806)+M-3) + 61) mod 65 in {48,49}",
+   "month_count": "n = floor((67*MM + 61 + 17)/65) - [leap]",
+   "true_date": "mean_date + moon_tab(28*anomaly_moon)/60 - sun_tab(12*(mean_sun-1/4))/60; линейная интерполяция таблиц"
+  },
+  "tsurphu_epoch_E1732": {
+   "Y0": 1732,
+   "beta_star": 59,
+   "m0": "2353745 + 1795153/7635600",
+   "s0": "-5983/108540",
+   "a0": "207/392",
+   "leap_month_rule": "ix in {0,1}",
+   "month_count": "n = floor((67*MM + 59)/65) - [leap]"
+  },
+  "implementation": "phugpa.py (рядом, в losar_research/): точная Fraction-арифметика, все верификации в verify_vs_janson.py"
+ },
+ "caveats": [
+  "Wikipedia (en) 'Losar', таблица дат: строки 2008-2023 систематически НЕВЕРНЫ (даты сдвинуты — фактически ряд ~2004-2019 с шумом ±1 день; животные при этом верные); верны только 2024-2026 (на 2026-07). Как источник НЕ использована.",
+  "2006: FPMT Mandala (июнь 2006) пишет 'официально начался 1 марта', FPMT-Facebook и расчёт дают 28.02.2006. Возможная причина дневного сдвига в сообщениях — пропущенные/удвоенные дни на границе года; печатный Janson и код Henning оба дают 28.02.",
+  "В поисковой выдаче всплывала фраза 'Лосар 1991 = 3 марта' без идентифицируемого источника; противоречит печатной таблице Janson (15.02.1991) и обеим кодовым линиям — отброшено как шум.",
+  "1900-1926 и 2047-2100 (кроме 2095): только расчёт. Печатных таблиц и анонсов не найдено; надёжность держится на том, что та же реализация воспроизводит все 120 печатных дат и что независимый код Henning даёт то же самое на всём диапазоне.",
+  "Вариант константы a2 (стандарт 1/28 vs 'поправка Лочена' 3781/105840, используемая в опубликованных календарях Henning) сдвигает отдельные календарные дни ~раз в 10 лет (примеры из статьи: 2001-02-10, 2006-05-10, 2025-11-19), но НИ ОДНА дата Лосара 1900-2100 не затронута (обе линии согласны 201/201).",
+  "Лосар может выпадать на лунный день 2 (день 1 пропущен): 1901-02-20, 1977-02-19, 2084-02-07. Это не влияет на григорианскую дату начала года.",
+  "Операционный авторитет — печатный альманах Men-Tsee-Khang (Дхарамсала). Все найденные реальные анонсы (25 лет) совпали с расчётом, но для непокрытых лет (особенно до 1959) нельзя исключить ad-hoc отличия исторически изданных лхасских альманахов от канонического пересчёта.",
+  "Тибетский день начинается на рассвете (~5:00 местного среднего времени Лхасы); григорианская дата = гражданская дата этого дня. Часовые пояса на дату Лосара не влияют (дата целодневная).",
+  "Нумерация 'королевской эры': тиб. год = григорианский + 127 (например 2025 -> 2152); в части анонсов встречается +126 (2151). На даты не влияет.",
+  "Sonam Losar (таманги Непала), Sherpa/Gyalpo-варианты, а также китайский НГ и Цаган Сар — другие праздники/системы; их даты НЕ из этой таблицы."
+ ]
+}

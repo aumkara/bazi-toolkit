@@ -1,0 +1,137 @@
+<!doctype html>
+<!-- SPDX-License-Identifier: AGPL-3.0-or-later · Copyright (C) 2026 Tim -->
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Ба Цзы — локальный калькулятор</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="/app.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <span class="brand-zh" lang="zh" aria-hidden="true">八字</span>
+    <div>
+      <h1>Ба Цзы</h1>
+      <p>Четыре столпа — локальный калькулятор</p>
+    </div>
+  </div>
+  <p class="privacy">Считается на этом компьютере. Данные рождения никуда не отправляются и не сохраняются.</p>
+</header>
+
+<main>
+  <section class="card" aria-labelledby="form-title">
+    <h2 id="form-title">Данные рождения</h2>
+    <form id="birth-form" novalidate>
+      <div class="grid">
+        <div class="field">
+          <label for="f-date">Дата рождения</label>
+          <input type="date" id="f-date" required min="1900-01-01" max="2100-12-31">
+        </div>
+
+        <div class="field">
+          <label for="f-time">Время по часам</label>
+          <input type="time" id="f-time">
+          <label class="check"><input type="checkbox" id="f-notime"> время неизвестно</label>
+        </div>
+
+        <fieldset class="field">
+          <legend>Пол</legend>
+          <div class="seg">
+            <label><input type="radio" name="gender" value="М" checked><span>мужской</span></label>
+            <label><input type="radio" name="gender" value="Ж"><span>женский</span></label>
+          </div>
+          <p class="hint">Нужен для направления столпов удачи.</p>
+        </fieldset>
+
+        <fieldset class="field wide">
+          <legend>Место рождения</legend>
+          <div class="seg">
+            <label><input type="radio" name="place" value="city" checked><span>город из базы</span></label>
+            <label><input type="radio" name="place" value="utc"><span>пояс вручную</span></label>
+          </div>
+          <div id="place-city">
+            <input type="text" id="f-city" list="cities" placeholder="Начните вводить: Москва" autocomplete="off" aria-label="Город рождения">
+            <datalist id="cities"></datalist>
+            <p class="hint">Город даёт исторический пояс и поправку на истинное солнечное время.</p>
+          </div>
+          <div id="place-utc" hidden>
+            <div class="utc"><span>UTC</span><input type="number" id="f-utc" step="0.25" min="-12" max="14" placeholder="+3" aria-label="Смещение от UTC в часах"></div>
+            <p class="hint">Без города солнечная поправка не делается — это попадёт в оговорки.</p>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="f-asof">Прогноз на дату</label>
+          <input type="date" id="f-asof" min="1900-01-01" max="2100-12-31">
+          <p class="hint">Пусто — сегодня. Влияет на текущий год и столп удачи.</p>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button type="submit" class="primary" id="submit">Рассчитать карту</button>
+        <p id="form-error" class="error" role="alert" hidden></p>
+      </div>
+    </form>
+  </section>
+
+  <div id="result" hidden>
+    <section class="card caveats" aria-labelledby="caveats-title">
+      <h2 id="caveats-title">Оговорки расчёта</h2>
+      <ul id="caveats"></ul>
+    </section>
+
+    <section class="card" aria-labelledby="chart-title">
+      <div class="card-head">
+        <h2 id="chart-title">Четыре столпа</h2>
+        <p id="chart-sub" class="muted"></p>
+      </div>
+      <div id="pillars" class="pillars"></div>
+      <dl id="facts" class="facts"></dl>
+    </section>
+
+    <section class="card" aria-labelledby="report-title">
+      <div class="card-head">
+        <h2 id="report-title">Отчёт в Markdown</h2>
+        <p class="muted">Отметьте, что должно попасть в файл. Это расчёт без толкования.</p>
+      </div>
+
+      <div id="sections" class="sections"></div>
+
+      <div class="toolbar">
+        <div class="presets" role="group" aria-label="Быстрый выбор разделов">
+          <button type="button" data-preset="default">по умолчанию</button>
+          <button type="button" data-preset="all">все разделы</button>
+          <button type="button" data-preset="none">только обязательные</button>
+        </div>
+        <label class="check"><input type="checkbox" id="opt-charts"> с графиками SVG
+          <span class="hint">их рисует md2pdf.sh; обычный просмотрщик Markdown покажет код</span></label>
+      </div>
+
+      <div class="export">
+        <button type="button" class="primary" id="btn-download">Скачать .md</button>
+        <button type="button" id="btn-copy">Копировать текст</button>
+        <button type="button" id="btn-json">Скачать JSON</button>
+        <span id="export-note" class="muted" role="status"></span>
+      </div>
+
+      <div class="tabs" role="tablist">
+        <button type="button" role="tab" id="tab-preview" aria-selected="true" aria-controls="doc">Просмотр</button>
+        <button type="button" role="tab" id="tab-source" aria-selected="false" aria-controls="src">Markdown</button>
+      </div>
+      <article id="doc" class="doc" role="tabpanel" aria-labelledby="tab-preview"></article>
+      <pre id="src" class="src" role="tabpanel" aria-labelledby="tab-source" hidden></pre>
+    </section>
+  </div>
+</main>
+
+<footer class="foot">
+  <p>Числа считает <code>bazi.py</code> на Swiss Ephemeris; страница их только показывает. Ба Цзы — язык тенденций традиции,
+  не прогноз и не медицинская, психологическая или финансовая рекомендация.</p>
+</footer>
+
+<script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Copyright (C) 2026 Tim
+# Вся батарея самопроверок на каждом пуше и pull request.
+# Действия закреплены по SHA коммита (рядом — версия): тег можно передвинуть, коммит — нет.
+name: check
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # Полная батарея с внешними оракулами (--require: пропуск оракула здесь считается ошибкой)
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.12", "3.14"]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Окружение и внешние оракулы
+        run: |
+          python -m venv .venv
+          .venv/bin/python -m pip install -q --disable-pip-version-check -r requirements.txt
+          .venv/bin/python -m pip install -q --disable-pip-version-check -r requirements-dev.txt
+          .venv/bin/python -m pip install -q --disable-pip-version-check --no-deps sxtwl==2.0.7 kinqimen==0.0.6.6
+      - name: Вся батарея самопроверок
+        run: bash check_all.sh
+      - name: Оракулы обязательны
+        run: |
+          .venv/bin/python verify_vs_lunar.py 120 --require
+          .venv/bin/python verify_vs_iztro.py 40 --require
+          .venv/bin/python verify_vs_caltib.py --require
+          .venv/bin/python verify_vs_kinqimen.py 40 --require
+          .venv/bin/python verify_vs_dashaflow.py 30 --require
+      - name: Оракул pyhd (импортируется только на Python ≥ 3.13)
+        if: matrix.python == '3.14'
+        run: .venv/bin/python verify_vs_pyhd.py 40 --require
+
+  # Нижняя заявленная версия Python: только обязательные зависимости, оракулы честно пропускаются
+  minimal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.10"
+      - name: Установка как у пользователя
+        run: bash setup.sh --no-skills

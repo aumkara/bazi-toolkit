@@ -1,0 +1,2 @@
+# При выгрузке через git archive (publish_snapshot.sh) не попадает:
+.gitlab-ci.yml export-ignore
