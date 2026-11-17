@@ -5,7 +5,7 @@
 
 [project]
 name = "bazi-toolkit"
-version = "0.1.0"
+version = "0.1.1"
 description = "Калькуляторы китайской и ведической метафизики на Swiss Ephemeris, скиллы для LLM-агентов, MCP-сервер и локальная веб-версия Ба Цзы"
 readme = "README.md"
 requires-python = ">=3.10"
