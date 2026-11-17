@@ -88,7 +88,7 @@ bash setup.sh
 | Совместимость двоих | `compat.py` | `profile3-compare` | Ба Цзы, Джйотиш и Дизайн Человека для пары; у каждой системы своя шкала, общего процента нет |
 | Профиль по трём системам | — | `profile3` | Ба Цзы, Джйотиш и Дизайн Человека в одном разборе: четыре файла Markdown и PDF |
 
-Вспомогательные программы: `bazi_reverse.py` ищет даты по известным столпам, `bazi_report.py` собирает отчёт в Markdown, `jieqi.py` печатает солнечные термины года.
+Вспомогательные программы: `bazi_reverse.py` ищет даты по известным столпам, `bazi_report.py` собирает отчёт в Markdown, `jieqi.py` печатает солнечные термины года, `time_window.py` ищет ближайшие изменения основных показателей при сдвиге минуты рождения (не ректификация).
 
 ## Использование
 
@@ -98,6 +98,7 @@ bash setup.sh
 .venv/bin/python bazi.py 1990-05-15 14:30 М --city Москва --json   # пояс обязателен: --city или UTC+N
 .venv/bin/python jyotish.py 1990-05-15 14:30 55.75 37.62 +4 --json # широта, долгота, смещение от UTC
 .venv/bin/python hd.py 1990-05-15 14:30 +4 --json
+.venv/bin/python time_window.py 1990-05-15 14:30 55.75 37.62 +4 --json # окно устойчивости ±120 минут
 .venv/bin/python gene_keys.py 1990-05-15 14:30 +4 --json
 .venv/bin/python tibetan.py 1990-05-15 --json
 .venv/bin/python ziwei.py --lunar 1990 4 15 14 М --json            # лунные год, месяц, день и час

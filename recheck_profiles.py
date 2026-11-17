@@ -4,7 +4,8 @@
 """recheck_profiles.py — найти сохранённые чтения, которые устарели после фиксов движков (issue #13).
 
 Механизм: в каждой папке profiles/<дата>_<город>[__…]/ лежат персист `_bazi.json`, `_jyotish.json`,
-`_hd.json`, `_gene_keys.json`, `_tibetan.json` и штамп `_engines.sha` (дата прогона + sha256 всех *.py).
+`_hd.json`, `_gene_keys.json`, `_tibetan.json`, при наличии `_time_window.json`,
+и штамп `_engines.sha` (дата прогона + sha256 всех *.py).
 Скрипт (а) отбирает кандидатов — папки, где отпечаток изменившегося движка старый или штампа нет;
 (б) пересчитывает JSON ТЕКУЩИМ кодом с фиксацией даты (--as-of из сохранённого JSON — иначе любой профиль
 «разойдётся» назавтра) и сравнивает НАТАЛЬНЫЕ поля; (в) печатает, какие профили перегенерировать.
@@ -14,6 +15,7 @@
 папки), пол — `_bazi.input.gender`; солнечное `_bazi.input.time` обратно в CLI НЕ подаётся.
 
 Запуск:  .venv/bin/python recheck_profiles.py [--all] [--only ПАПКА] [--verbose]
+         .venv/bin/python recheck_profiles.py --test  # синтетические данные, profiles/ не читается
   по умолчанию пересчитываются только кандидаты по штампу; --all — все папки с персистом.
 Данные людей остаются локально: скрипт ничего не пишет и не отправляет, только печатает отчёт.
 Старые 7-файловые папки (/profile6), у которых есть свежий `<дата>_<город>__…3sys`, считаются ЗАМЕНЁННЫМИ и не пересчитываются.
@@ -32,7 +34,7 @@ if not os.path.exists(PY):
     PY = sys.executable
 sys.path.insert(0, DIR)
 
-ENGINES = ["bazi.py", "jyotish.py", "hd.py", "gene_keys.py", "tibetan.py"]
+ENGINES = ["bazi.py", "jyotish.py", "hd.py", "gene_keys.py", "tibetan.py", "time_window.py"]
 # натальные поля для сравнения (пути через точку; списки сравниваются целиком)
 NATAL = {
     "_bazi.json": ["pillars", "day_master", "strength", "element_balance", "yongshen", "jishen",
@@ -73,7 +75,13 @@ def stamped_fingerprints(folder):
 
 def load(folder, name):
     p = os.path.join(folder, name)
-    return json.load(open(p, encoding="utf-8")) if os.path.exists(p) else None
+    if not os.path.exists(p):
+        return None
+    with open(p, encoding="utf-8") as f:
+        value = json.load(f)
+    if name == "_time_window.json" and not isinstance(value, dict):
+        raise RuntimeError(f"{name}: сохранённый файл должен содержать JSON-объект, не null или список")
+    return value
 
 
 def birth_inputs(folder, bz, hd):
@@ -147,6 +155,16 @@ def _natal_only(paths):
     return out
 
 
+def window_command(saved):
+    """Воспроизвести именно сохранённую сетку, включая размер и даты через полночь."""
+    inp = saved.get("input") if isinstance(saved, dict) else None
+    required = ("date", "time", "latitude", "longitude", "utc_offset", "span_minutes")
+    if not isinstance(inp, dict) or any(k not in inp for k in required):
+        raise RuntimeError("_time_window.json: не хватает input для пересчёта окна")
+    return ["time_window.py", str(inp["date"]), str(inp["time"]), str(inp["latitude"]),
+            str(inp["longitude"]), str(inp["utc_offset"]), "--span", str(inp["span_minutes"]), "--json"]
+
+
 def recheck(folder, verbose=False):
     bz, hd = load(folder, "_bazi.json"), load(folder, "_hd.json")
     date, wall, off, gender, city = birth_inputs(folder, bz, hd)
@@ -205,11 +223,102 @@ def recheck(folder, verbose=False):
         d = _natal_only(d)
         if d:
             changes["_tibetan.json"] = d
+    # Окно — самостоятельная обязательная оговорка новых профилей. Старые чтения без
+    # этого файла не считаем изменившимися только из-за расширения формата персиста.
+    window = load(folder, "_time_window.json")
+    if window is not None:
+        new = run_json(window_command(window))
+        d = diff_paths(window, new)
+        if d:
+            changes["_time_window.json"] = d
     return ("CHANGED" if changes else "OK"), changes
+
+
+def _test():
+    """Пять карт неизменны: исправление только окна всё равно должно дать CHANGED."""
+    import copy
+    import tempfile
+    from datetime import datetime
+    from unittest.mock import patch
+    from time_window import build_window
+
+    ok = True
+
+    def chk(cond, label):
+        nonlocal ok
+        ok &= bool(cond)
+        print(("  ✓ " if cond else "  ✗ ") + label)
+
+    # Не создаём и не открываем profiles/: load/run_json работают с копиями фикстур.
+    wall = datetime(1990, 5, 15, 14, 30)
+    saved = {name: {"input": {"birth_local": "1990-05-15 14:30 UTC+4"}} for name in NATAL}
+    saved["_bazi.json"] = {
+        "input": {"date": wall.date().isoformat(), "wall_time": "14:30", "time": "13:04",
+                  "utc_offset": 4, "gender": "мужской", "city": "Москва"},
+        "current_year": {"year": wall.year, "year_boundary": {"as_of": wall.date().isoformat()}},
+    }
+    saved["_jyotish.json"]["dasha_as_of"] = wall.date().isoformat()
+    saved["_time_window.json"] = build_window(wall, 55.75, 37.62, 4, span=51)
+    fresh = copy.deepcopy(saved)
+    calls = []
+
+    def fake_run(cmd):
+        calls.append(cmd)
+        name = "_" + cmd[0].removesuffix(".py") + ".json"
+        return copy.deepcopy(fresh[name])
+
+    def check():
+        with patch(__name__ + ".load", side_effect=lambda _f, name: copy.deepcopy(saved.get(name))), \
+                patch(__name__ + ".run_json", side_effect=fake_run):
+            return recheck("1990-05-15_Москва")
+
+    status, changes = check()
+    chk(status == "OK" and not changes, "пять карт и сохранённое окно без изменений — OK")
+    cmd = next(c for c in calls if c[0] == "time_window.py")
+    chk(cmd == ["time_window.py", "1990-05-15", "14:30", "55.75", "37.62", "4", "--span", "51", "--json"],
+        "пересчёт по настенному input окна, исходным координатам/поясу и span=51")
+    for key in ("items", "stable_window", "stable_window_core", "honesty_note", "conventions"):
+        fresh["_time_window.json"] = copy.deepcopy(saved["_time_window.json"])
+        if key == "items":
+            fresh["_time_window.json"][key][0]["value"] = "синтетическое изменение"
+        elif key.startswith("stable_window"):
+            fresh["_time_window.json"][key]["minutes_before"] += 1
+        elif key == "honesty_note":
+            fresh["_time_window.json"][key] += " Изменённая оговорка."
+        else:
+            fresh["_time_window.json"][key]["hd"] = "синтетическая конвенция"
+        status, changes = check()
+        chk(status == "CHANGED" and set(changes) == {"_time_window.json"},
+            f"изменилось только {key} окна — CHANGED, не скрыто неизменностью пяти карт")
+    legacy = saved.pop("_time_window.json")
+    chk(check() == ("OK", {}), "старый персист без окна — прежнее поведение")
+    saved["_time_window.json"] = copy.deepcopy(legacy)
+    del saved["_time_window.json"]["input"]["latitude"]
+    try:
+        check()
+    except RuntimeError:
+        chk(True, "неполный input сохранённого окна — ошибка, не OK")
+    else:
+        chk(False, "неполный input сохранённого окна не отклонён")
+    with tempfile.TemporaryDirectory(prefix="recheck-null-test-") as folder:
+        name = "_time_window.json"
+        chk(load(folder, name) is None, "отсутствующее окно допустимо для легаси")
+        with open(os.path.join(folder, name), "w", encoding="utf-8") as f:
+            json.dump(None, f)
+        try:
+            load(folder, name)
+        except RuntimeError:
+            chk(True, "существующее окно с JSON null — ошибка, не легаси")
+        else:
+            chk(False, "JSON null окна не отклонён")
+    print("recheck_profiles --test:", "ЗЕЛЕНО ✓" if ok else "КРАСНОЕ ✗")
+    return 0 if ok else 1
 
 
 def main():
     argv = sys.argv[1:]
+    if argv == ["--test"]:
+        return _test()
     verbose = "--verbose" in argv
     only = argv[argv.index("--only") + 1] if "--only" in argv else None
     do_all = "--all" in argv
