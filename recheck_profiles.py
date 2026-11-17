@@ -4,7 +4,7 @@
 """recheck_profiles.py — найти сохранённые чтения, которые устарели после фиксов движков (issue #13).
 
 Механизм: в каждой папке profiles/<дата>_<город>[__…]/ лежат персист `_bazi.json`, `_jyotish.json`,
-`_hd.json`, `_gene_keys.json`, `_tibetan.json`, при наличии `_time_window.json`,
+`_hd.json`, `_gene_keys.json`, `_tibetan.json`, при наличии `_time_window.json` / `_retro_signals.json`,
 и штамп `_engines.sha` (дата прогона + sha256 всех *.py).
 Скрипт (а) отбирает кандидатов — папки, где отпечаток изменившегося движка старый или штампа нет;
 (б) пересчитывает JSON ТЕКУЩИМ кодом с фиксацией даты (--as-of из сохранённого JSON — иначе любой профиль
@@ -34,7 +34,7 @@ if not os.path.exists(PY):
     PY = sys.executable
 sys.path.insert(0, DIR)
 
-ENGINES = ["bazi.py", "jyotish.py", "hd.py", "gene_keys.py", "tibetan.py", "time_window.py"]
+ENGINES = ["bazi.py", "jyotish.py", "hd.py", "gene_keys.py", "tibetan.py", "time_window.py", "retro_signals.py"]
 # натальные поля для сравнения (пути через точку; списки сравниваются целиком)
 NATAL = {
     "_bazi.json": ["pillars", "day_master", "strength", "element_balance", "yongshen", "jishen",
@@ -79,7 +79,7 @@ def load(folder, name):
         return None
     with open(p, encoding="utf-8") as f:
         value = json.load(f)
-    if name == "_time_window.json" and not isinstance(value, dict):
+    if name in ("_time_window.json", "_retro_signals.json") and not isinstance(value, dict):
         raise RuntimeError(f"{name}: сохранённый файл должен содержать JSON-объект, не null или список")
     return value
 
@@ -165,7 +165,18 @@ def window_command(saved):
             str(inp["longitude"]), str(inp["utc_offset"]), "--span", str(inp["span_minutes"]), "--json"]
 
 
+def retro_command(folder, saved):
+    """Дата проверки прошлого фиксирована: новый день запуска не добавляет сигналы."""
+    inp = saved.get("input") if isinstance(saved, dict) else None
+    if not isinstance(inp, dict) or any(k not in inp for k in ("as_of", "years")):
+        raise RuntimeError("_retro_signals.json: не хватает input.as_of/years для пересчёта")
+    return ["retro_signals.py", "--bazi", os.path.join(folder, "_bazi.json"),
+            "--jyotish", os.path.join(folder, "_jyotish.json"),
+            "--as-of", str(inp["as_of"]), "--years", str(inp["years"]), "--json"]
+
+
 def recheck(folder, verbose=False):
+    retro = load(folder, "_retro_signals.json")
     bz, hd = load(folder, "_bazi.json"), load(folder, "_hd.json")
     date, wall, off, gender, city = birth_inputs(folder, bz, hd)
     if not (date and wall and gender):
@@ -182,6 +193,11 @@ def recheck(folder, verbose=False):
     for k in NATAL["_bazi.json"]:
         diff_paths(bz.get(k), new.get(k), f"{k}.", d)
     d = _natal_only(d)
+    # Исходники ретро сравниваются ПОСЛЕ фильтра метаданных: даже добавленная конвенция
+    # должна помечать сохранённые вопросы устаревшими, а не исчезать как +conventions.*.
+    if retro is not None:
+        for k in ("ten_gods", "conventions"):
+            diff_paths(bz.get(k), new.get(k), f"{k}.", d)
     if d:
         changes["_bazi.json"] = d
     # jyotish
@@ -197,6 +213,9 @@ def recheck(folder, verbose=False):
             for k in NATAL["_jyotish.json"]:
                 diff_paths(jy.get(k), new.get(k), f"{k}.", d)
             d = _natal_only(d)
+            if retro is not None:
+                for k in ("dasha_timeline", "conventions"):
+                    diff_paths(jy.get(k), new.get(k), f"{k}.", d)
             if d:
                 changes["_jyotish.json"] = d
         except RuntimeError as e:
@@ -231,6 +250,13 @@ def recheck(folder, verbose=False):
         d = diff_paths(window, new)
         if d:
             changes["_time_window.json"] = d
+    # Натальные исходники уже проверены выше; отдельно ловим изменения алгоритма
+    # ретро-сигналов на тех же исходниках. Выбор ID человека не переписывается.
+    if retro is not None:
+        new = run_json(retro_command(folder, retro))
+        d = diff_paths(retro, new)
+        if d:
+            changes["_retro_signals.json"] = d
     return ("CHANGED" if changes else "OK"), changes
 
 
@@ -300,17 +326,65 @@ def _test():
         chk(True, "неполный input сохранённого окна — ошибка, не OK")
     else:
         chk(False, "неполный input сохранённого окна не отклонён")
-    with tempfile.TemporaryDirectory(prefix="recheck-null-test-") as folder:
-        name = "_time_window.json"
-        chk(load(folder, name) is None, "отсутствующее окно допустимо для легаси")
-        with open(os.path.join(folder, name), "w", encoding="utf-8") as f:
-            json.dump(None, f)
-        try:
-            load(folder, name)
-        except RuntimeError:
-            chk(True, "существующее окно с JSON null — ошибка, не легаси")
+    saved["_time_window.json"] = legacy
+    fresh["_time_window.json"] = copy.deepcopy(legacy)
+    # Синтетический результат проверяет интеграцию, не формулы retro_signals.
+    saved["_retro_signals.json"] = {
+        "input": {"as_of": "2026-11-17", "years": 15}, "signals": [{"id": "synthetic"}],
+        "source_note": "Синтетический источник", "honesty_note": "Синтетическая оговорка",
+        "not_computed": [], "conventions": {"annual_years": "Синтетическая конвенция"},
+    }
+    saved["_bazi.json"].update(ten_gods=[{"name": "正官", "weight": 1}], conventions={"test": "синтетическая"})
+    saved["_jyotish.json"].update(dasha_timeline=[{"from": "синтетическая дата"}], conventions="синтетическая")
+    fresh["_bazi.json"] = copy.deepcopy(saved["_bazi.json"])
+    fresh["_jyotish.json"] = copy.deepcopy(saved["_jyotish.json"])
+    fresh["_retro_signals.json"] = copy.deepcopy(saved["_retro_signals.json"])
+    chk(check() == ("OK", {}), "сохранённые ретро-сигналы без изменений — OK")
+    cmd = next(c for c in calls if c[0] == "retro_signals.py")
+    chk(cmd == ["retro_signals.py", "--bazi", os.path.join("1990-05-15_Москва", "_bazi.json"),
+                "--jyotish", os.path.join("1990-05-15_Москва", "_jyotish.json"),
+                "--as-of", "2026-11-17", "--years", "15", "--json"],
+        "ретро пересчитывается по сохранённым JSON с исходными as_of/years")
+    for key in ("signals", "source_note", "honesty_note", "not_computed", "conventions"):
+        fresh["_retro_signals.json"] = copy.deepcopy(saved["_retro_signals.json"])
+        if key == "signals":
+            fresh["_retro_signals.json"][key][0]["id"] = "synthetic-changed"
+        elif key == "not_computed":
+            fresh["_retro_signals.json"][key].append("Синтетическое ограничение")
+        elif key == "conventions":
+            fresh["_retro_signals.json"][key]["annual_years"] += " Изменение."
         else:
-            chk(False, "JSON null окна не отклонён")
+            fresh["_retro_signals.json"][key] += " Изменение."
+        status, changes = check()
+        chk(status == "CHANGED" and set(changes) == {"_retro_signals.json"},
+            f"изменилось только {key} ретро — CHANGED")
+    fresh["_retro_signals.json"] = copy.deepcopy(saved["_retro_signals.json"])
+    for name, key in (("_bazi.json", "ten_gods"), ("_jyotish.json", "dasha_timeline"),
+                      ("_bazi.json", "conventions"), ("_jyotish.json", "conventions")):
+        original = copy.deepcopy(fresh[name])
+        fresh[name][key] = "синтетическое изменение исходника ретро"
+        status, changes = check()
+        chk(status == "CHANGED" and name in changes,
+            f"изменился только свежий {name}:{key} — устаревшее ретро не скрывает CHANGED")
+        fresh[name] = original
+    fresh["_bazi.json"]["conventions"]["new_rule"] = "синтетическое новое правило"
+    status, changes = check()
+    chk(status == "CHANGED" and any("+conventions.new_rule" in s for s in changes.get("_bazi.json", [])),
+        "добавление +conventions.new_rule не отфильтровано — CHANGED")
+    fresh["_bazi.json"] = copy.deepcopy(saved["_bazi.json"])
+    del saved["_retro_signals.json"]
+    chk(check() == ("OK", {}), "старый персист без ретро — прежнее поведение")
+    with tempfile.TemporaryDirectory(prefix="recheck-null-test-") as folder:
+        for name in ("_time_window.json", "_retro_signals.json"):
+            chk(load(folder, name) is None, f"отсутствующий {name} допустим для легаси")
+            with open(os.path.join(folder, name), "w", encoding="utf-8") as f:
+                json.dump(None, f)
+            try:
+                load(folder, name)
+            except RuntimeError:
+                chk(True, f"существующий {name} с JSON null — ошибка, не легаси")
+            else:
+                chk(False, f"JSON null в {name} не отклонён")
     print("recheck_profiles --test:", "ЗЕЛЕНО ✓" if ok else "КРАСНОЕ ✗")
     return 0 if ok else 1
 

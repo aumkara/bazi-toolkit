@@ -84,7 +84,8 @@ run "пути в скиллах — корень только через BAZI_DI
 run "verify_all — чистый тест движков (golden + кросс-тождества)"   "$PY" verify_all.py
 run "timezones --test — исторические оффсеты (якоря Wikipedia/IANA)" "$PY" timezones.py --test
 run "time_window --test — устойчивость показателей к минуте рождения" "$PY" time_window.py --test
-run "recheck_profiles --test — сохранённое окно и повторный пересчёт" "$PY" recheck_profiles.py --test
+run "retro_signals --test — кандидаты вопросов о прошлом с основаниями из JSON" "$PY" retro_signals.py --test
+run "recheck_profiles --test — проверка персистов на синтетических данных" "$PY" recheck_profiles.py --test
 run "compat --selftest — инварианты совместимости"     "$PY" compat.py --selftest
 run "infographics --test — все генераторы графиков"    "$PY" infographics.py --test
 run "validate_layouts — раскладка SVG на 8 рождениях"  "$PY" validate_layouts.py

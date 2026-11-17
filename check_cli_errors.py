@@ -11,12 +11,16 @@ import json
 import os
 import subprocess
 import sys
+import tempfile
+from contextlib import contextmanager
 
 DIR = os.path.dirname(os.path.abspath(__file__))
 PY = os.path.join(DIR, ".venv", "bin", "python")
 PY = PY if os.path.exists(PY) else sys.executable
 
 BAD = [  # (ярлык, скрипт, аргументы) — везде ждём код 2
+    ("retro_signals: нет файлов", "retro_signals.py", []),
+    ("retro_signals: отсутствующий файл", "retro_signals.py", ["--bazi", "/dev/null/нет.json", "--jyotish", "/dev/null/нет.json"]),
     ("time_window: нет данных", "time_window.py", []),
     ("time_window: слишком широкое окно", "time_window.py", ["1990-05-15", "14:30", "55.75", "37.62", "+4", "--span", "361"]),
     ("bazi: нет данных", "bazi.py", []),
@@ -67,6 +71,25 @@ def call(script, args, env=None):
                           env={**os.environ, **(env or {})})
 
 
+@contextmanager
+def retro_fixture_args():
+    """Два нейтральных CLI JSON живут только внутри контекста; также нужны honesty-гейту."""
+    with tempfile.TemporaryDirectory(prefix="retro-fixture-") as tmp:
+        args = []
+        for name, command in (
+            ("bazi", ["1990-05-15", "14:30", "М", "--city", "Москва"]),
+            ("jyotish", ["1990-05-15", "14:30", "55.75", "37.62", "+4"]),
+        ):
+            p = call(name + ".py", command + ["--json"])
+            if p.returncode != 0:
+                raise RuntimeError(f"не удалось посчитать нейтральный {name}.json: код {p.returncode}")
+            path = os.path.join(tmp, name + ".json")
+            with open(path, "w", encoding="utf-8") as f:
+                f.write(p.stdout)
+            args += ["--" + name, path]
+        yield args
+
+
 def main():
     ok = True
 
@@ -95,6 +118,15 @@ def main():
         except ValueError:
             data = {}
         chk(p.returncode == 0 and key in data and "error" not in data, f"результат: {label}",
+            f"код {p.returncode}, stderr {p.stderr.strip()[-80:]!r}")
+    with retro_fixture_args() as args:
+        p = call("retro_signals.py", [*args, "--as-of", "2026-11-17", "--json"])
+        try:
+            data = json.loads(p.stdout)
+        except ValueError:
+            data = {}
+        chk(p.returncode == 0 and isinstance(data.get("signals"), list) and bool(data.get("source_note")),
+            "результат: retro_signals (временные нейтральные JSON)",
             f"код {p.returncode}, stderr {p.stderr.strip()[-80:]!r}")
     p = call("hd.py", ["2026-13-45", "14:30", "+4", "--json"], env={"BAZI_DEBUG": "1"})
     chk(p.returncode == 2 and "Traceback" in p.stderr, "BAZI_DEBUG=1 показывает трассировку")

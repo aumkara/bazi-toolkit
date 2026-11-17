@@ -47,6 +47,7 @@ ENGINES = {
     "gene_keys.json": ["gene_keys.py", "1990-03-03", "15:00", "3", "--json"],
     "tibetan.json": ["tibetan.py", "1990-03-03", "--as-of", AS_OF, "--json"],
     "time_window.json": ["time_window.py", "1990-05-15", "14:30", "55.75", "37.62", "+4", "--json"],
+    "retro_signals.json": ["retro_signals.py", "--as-of", AS_OF, "--json"],
 }
 
 # honesty-образные имена ключей: оговорки, границы, уверенность, провенанс, «не выдано»
@@ -67,6 +68,7 @@ CANON = {
                      "date_confidence", "note", "year_boundary", "bazi_divergence",
                       "alt_if_before_losar", "withheld_reason"},
     "time_window.json": {"honesty_note", "conventions", "stable_window", "stable_window_core"},
+    "retro_signals.json": {"honesty_note", "source_note", "not_computed", "conventions"},
 }
 # honesty-образные ключи, СОЗНАТЕЛЬНО не входящие в карту скилла (внутренности/дубли) —
 # каждое исключение аргументируй здесь, а не в голове:
@@ -77,10 +79,15 @@ IGNORE = {
     "gene_keys.json": set(),
     "tibetan.json": set(),
     "time_window.json": set(),
+    "retro_signals.json": set(),
 }
 
 
 def _run(cmd):
+    if cmd[0] == "retro_signals.py" and "--bazi" not in cmd:
+        from check_cli_errors import retro_fixture_args
+        with retro_fixture_args() as args:
+            return _run([*cmd, *args])
     p = subprocess.run([PY] + [os.path.join(DIR, cmd[0])] + cmd[1:],
                        capture_output=True, text=True, timeout=300, cwd=DIR)
     if p.returncode != 0:
