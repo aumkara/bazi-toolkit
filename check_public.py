@@ -17,7 +17,9 @@
     рабочее состояние агентов.
 Только на машине владельца (чего нет — честно пропускается):
   • даты рождения из имён локальных чтений (`profiles/`, `chart_*`, `Подарок_*`, `year_*`) в любой записи:
-    ГГГГ-ММ-ДД, ДД.ММ.ГГГГ, Д/М/ГГГГ, кортеж (ГГГГ, М, Д);
+    ГГГГ-ММ-ДД, ДД.ММ.ГГГГ, Д/М/ГГГГ, кортеж (ГГГГ, М, Д); датой рождения считается КАЖДАЯ дата в имени
+    (у папки пары их две), кроме даты с меткой прогона `run-` (`…__run-2026-11-17`): без метки дата прогона
+    попала бы в этот список, и гейт начал бы блокировать любой файл с ней — например CHANGELOG.md;
   • строки из локального `.public-denylist` (по одной на строку, `#` — комментарий): ники, домены, имена.
 Выход 0 — чисто, 1 — есть находки.
 
@@ -48,7 +50,7 @@ PATTERNS = [
         r"|AKIA[0-9A-Z]{16}|xox[baprs]-[A-Za-z0-9-]{10,}|-----BEGIN [A-Z ]*PRIVATE KEY-----|PrivateKey\s*=\s*[A-Za-z0-9+/]{40,}")),
     ("URL с паролем", re.compile(r"https?://[^/\s:@\"'<>]+:[^/\s@\"'<>]+@[A-Za-z0-9.-]+")),
 ]
-DATE_IN_NAME = re.compile(r"(?:19|20)\d{2}-\d{2}-\d{2}")
+DATE_IN_NAME = re.compile(r"(?<!run-)(?:19|20)\d{2}-\d{2}-\d{2}")   # дата после метки run- — дата прогона, не рождения
 
 
 def date_regex(iso):
@@ -178,6 +180,8 @@ def scan(root, files, dates=None, deny=None, read=None, links=None):
 
 
 def _test():
+    from datetime import date, timedelta
+
     ok = True
 
     def chk(cond, label):
@@ -206,6 +210,12 @@ def _test():
         os.symlink(tmp, os.path.join(tmp, "linkdir"))
         put("nick.md", "автор — SecretNick\n")
         put("profiles/1971-02-03_Город/1_bazi.md", "личное чтение\n")
+        # Вторую синтетическую дату получаем сдвигом нейтральной фикстуры проекта.
+        pair_date = date(1990, 5, 15) + timedelta(days=1)
+        put(f"profiles/compat__1971-02-03_Город__{pair_date.isoformat()}_Город/1.md", "чтение пары\n")
+        put("profiles/1971-02-03_Город__run-2001-01-01/1_bazi.md", "повторный прогон\n")
+        put("date2.md", f"второй человек пары: {pair_date:%d.%m.%Y}\n")
+        put("rundate.md", "выпуск от 2001-01-01\n")
         put("old.py.bak", "x = 1\n")
         files = tree_files(tmp)
         found = scan(tmp, files, dates=local_dates(tmp), deny=["secretnick"])
@@ -219,6 +229,9 @@ def _test():
         chk("URL с паролем" in by.get("url.txt", set()), "URL с паролем найден")
         chk(by.get("date.md") == {"дата из локальных чтений"}, "дата из имени локального чтения найдена в записях ГГГГ-ММ-ДД и ДД.ММ.ГГГГ")
         chk(by.get("tuple.py") == {"дата из локальных чтений"}, "та же дата найдена в записи кортежем (ГГГГ, М, Д)")
+        chk(by.get("date2.md") == {"дата из локальных чтений"}, "вторая дата рождения из имени папки пары тоже защищена")
+        chk("rundate.md" not in by and "2001-01-01" not in local_dates(tmp),
+            "дата прогона с меткой run- в имени папки датой рождения не считается")
         chk(by.get("fake_noreply.md") == {"email"} and "good_noreply.md" not in by, "«noreply» в середине адреса не спасает; настоящие noreply-адреса пропущены")
         chk(by.get("link.md") == {"symlink"} and by.get("linkdir") == {"symlink"}, "symlink на файл и на папку отмечены")
         chk(by.get("nick.md") == {"строка из .public-denylist"}, "строка из denylist найдена без учёта регистра")
